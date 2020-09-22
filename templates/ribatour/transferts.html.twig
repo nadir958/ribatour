@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+{% block title  %} transferts {% endblock %}
+{% block body %}
+    <nav id="nav" role="navigation">
+        <a href="#nav" title="Show navigation">Afficher navigation</a>
+        <a href="#" title="Hide navigation">Masque navigation</a>
+
+        <ul class="clearfix container">
+            <li class=""><a href="{{ path('ribatour') }}"> Accueil</a></li>
+            <li class=""><a href="{{ path('excursions') }}">Excursions </a></li>
+            <li class="active"><a href="{{ path('transferts') }}">Transferts </a></li>
+            <li class=""><a href="{{ path('about') }}">Qui sommes nous ? </a></li>
+            <li class=""><a href="{{ path('contact') }}">Contact </a></li>
+        </ul>
+    </nav>
+    <div class="page-content page-excusrions">
+        <div class="header-transfer-list"></div>
+        <div class="container">
+            <div class="search-form">
+                <!-- TAB NAVIGATION -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li ><a href="#tab1" role="tab" data-toggle="tab">
+                            <i class="fa fa-search"></i>
+                            <b>Excursions & Circuits</b>
+                            <span>Chercher une excursion ou un circuit au maroc</span>
+                        </a></li>
+                    <li class="active"><a href="#tab2" role="tab" data-toggle="tab">
+                            <i class="fa fa-search"></i>
+                            <b>Transfers</b>
+                            <span>Choisissez votre trajet</span>
+                        </a></li>
+                </ul>
+                <!-- TAB CONTENT -->
+                <div class="tab-content">
+                    <div class="tab-pane fade " id="tab1">
+                        <form action="http://ribatour.com/excursions" method="get" class="form-inline" role="form">
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="q" value="" placeholder="Mot clé">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control date-time-picker" name="date" placeholder="Date" value="">
+                            </div>
+
+                            <div class="form-group">
+                                <select type="text" class="form-control" name="destination" id="">
+                                    <option value="0">Par destination</option>
+                                    <option value="2" >Agadir</option>
+                                    <option value="9" >Casablanca</option>
+                                    <option value="11" >Chefchaouen</option>
+                                    <option value="5" >Desert & kasbahs</option>
+                                    <option value="12" >Desert & Kasbahs</option>
+                                    <option value="3" >Essaouira</option>
+                                    <option value="7" >Fès</option>
+                                    <option value="25" >Ifrane</option>
+                                    <option value="4" >Imlil</option>
+                                    <option value="1" >Marrakech</option>
+                                    <option value="16" >Marrakech, Palmeraie</option>
+                                    <option value="19" >Meknès</option>
+                                    <option value="15" >Merzouga</option>
+                                    <option value="23" >Moulay Yacoub</option>
+                                    <option value="24" >Moyen Atlas</option>
+                                    <option value="17" >Oualidia</option>
+                                    <option value="13" >Ouzoud</option>
+                                    <option value="8" >Rabat</option>
+                                    <option value="18" >Safi</option>
+                                    <option value="27" >Sefrou</option>
+                                    <option value="10" >Tanger</option>
+                                    <option value="20" >Taroudant</option>
+                                    <option value="22" >Taza</option>
+                                    <option value="21" >Tétouan</option>
+                                    <option value="14" >Zagora</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Chercher</button>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade active in" id="tab2">
+                        <form action="http://ribatour.com/transferts" method="get" class="form-inline" role="form">
+
+                            <div class="form-group">
+                                <select type="text" class="form-control" name="" id="" placeholder="">
+                                    <option value="0">Destination départ</option>
+                                    <option value="2">Agadir</option>
+                                    <option value="9">Casablanca</option>
+                                    <option value="11">Chefchaouen</option>
+                                    <option value="5">Desert & kasbahs</option>
+                                    <option value="12">Desert & Kasbahs</option>
+                                    <option value="3">Essaouira</option>
+                                    <option value="7">Fès</option>
+                                    <option value="25">Ifrane</option>
+                                    <option value="4">Imlil</option>
+                                    <option value="1">Marrakech</option>
+                                    <option value="16">Marrakech, Palmeraie</option>
+                                    <option value="19">Meknès</option>
+                                    <option value="15">Merzouga</option>
+                                    <option value="23">Moulay Yacoub</option>
+                                    <option value="24">Moyen Atlas</option>
+                                    <option value="17">Oualidia</option>
+                                    <option value="13">Ouzoud</option>
+                                    <option value="8">Rabat</option>
+                                    <option value="18">Safi</option>
+                                    <option value="27">Sefrou</option>
+                                    <option value="10">Tanger</option>
+                                    <option value="20">Taroudant</option>
+                                    <option value="22">Taza</option>
+                                    <option value="21">Tétouan</option>
+                                    <option value="14">Zagora</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-control" name="" id="" placeholder="">
+                                    <option value="0">Destination arrivée</option>
+                                    <option value="2">Agadir</option>
+                                    <option value="9">Casablanca</option>
+                                    <option value="11">Chefchaouen</option>
+                                    <option value="5">Desert & kasbahs</option>
+                                    <option value="12">Desert & Kasbahs</option>
+                                    <option value="3">Essaouira</option>
+                                    <option value="7">Fès</option>
+                                    <option value="25">Ifrane</option>
+                                    <option value="4">Imlil</option>
+                                    <option value="1">Marrakech</option>
+                                    <option value="16">Marrakech, Palmeraie</option>
+                                    <option value="19">Meknès</option>
+                                    <option value="15">Merzouga</option>
+                                    <option value="23">Moulay Yacoub</option>
+                                    <option value="24">Moyen Atlas</option>
+                                    <option value="17">Oualidia</option>
+                                    <option value="13">Ouzoud</option>
+                                    <option value="8">Rabat</option>
+                                    <option value="18">Safi</option>
+                                    <option value="27">Sefrou</option>
+                                    <option value="10">Tanger</option>
+                                    <option value="20">Taroudant</option>
+                                    <option value="22">Taza</option>
+                                    <option value="21">Tétouan</option>
+                                    <option value="14">Zagora</option>
+                                </select>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Chercher</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>    <div class="container" style="padding-top: 40px;">
+            <div id="transferts-results">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

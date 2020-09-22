@@ -1,0 +1,45 @@
+{% block header %}
+    <div class="top-navbar">
+        <div class="container">
+            <div id="top-nav-info">
+                <ul class=" list-inline">
+                    <li><a class="phone" href="tel:+212 245 111 000"><i class="fa fa-phone"></i> <i
+                                    class="fa fa-whatsapp"></i> +212 245 111 000</a></li>
+                    <li><a href="mailto:contact@ribatour.com"><i class="fa fa-envelope"></i> contact@ribatour.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navbar-lang" class="navbar-collapse collapse list-inline">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="{{ path('ribatour') }}" class="menu-item ">€</a></li>
+                    <li><a href="{{ path('ribatour') }}" class="menu-item ">Dhs</a></li>
+                </ul>
+                <ul class="nav navbar-nav pull-right">
+                    <li><a class="menu-item " href="{{ path('ribatour') }}"><img src="/images/fr_flag.png"
+                                                                     alt="French Version"></a></li>
+                    <li><a class="menu-item " href="{{ path('ribatour') }}"><img src="/images/en_flag.png"
+                                                                        alt="English Version"></a></li>
+                </ul>
+
+
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </div>
+    <nav class="navbar" role="navigation">
+        <div class="main-navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/travelagency-logo.png" alt="" class="img-responsive brand-logo">
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div> <!-- /.main-navbar -->
+
+
+    </nav> <!-- /.navbar -->
+{% endblock %}
