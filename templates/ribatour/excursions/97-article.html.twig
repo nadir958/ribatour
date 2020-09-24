@@ -1,0 +1,212 @@
+{% extends 'base.html.twig' %}
+{% block title  %} RIBATOUR {% endblock %}
+{% block body %}
+    <nav id="nav" role="navigation">
+        <a href="#nav" title="Show navigation">Afficher navigation</a>
+        <a href="#" title="Hide navigation">Masque navigation</a>
+
+        <ul class="clearfix container">
+            <li class=""><a href="{{ path('ribatour') }}"> Accueil</a></li>
+            <li class="active"><a href="{{ path('excursions') }}">Excursions </a></li>
+            <li class=""><a href="{{ path('transferts') }}">Transferts </a></li>
+            <li class=""><a href="{{ path('about') }}">Qui sommes nous ? </a></li>
+            <li class=""><a href="{{ path('contact') }}">Contact </a></li>
+        </ul>
+    </nav>
+    <div class="page-content page-details inner-page">
+        <div class="container">
+            <h1 class="page-title title-style-2">{{excursion.nom}}</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 details-col">
+                    <div id="procuct-carousel" class="carousel slide procuct-carousel" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#procuct-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#procuct-carousel" data-slide-to="1" ></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+
+                            <div class="item active">
+                                <img src="{{excursion.images}}" alt="">
+                            </div>
+
+                            <div class="item ">
+                                <img src="{{excursion.images}}" alt="">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#procuct-carousel" role="button" data-slide="prev">
+                            <span class="icon icon-left circle-icon">  <span class="icons-product-slider-left"></span> </span>
+                        </a>
+                        <a class="right carousel-control" href="#procuct-carousel" role="button" data-slide="next">
+                            <span class="icon icon-right circle-icon"> <span class="icons-product-slider-right"></span> </span>
+                        </a>
+
+                    </div>
+                    <div class="product-section product-presentation">
+                        <h3 class="section-title">Presentation <div class="title-under"></div></h3>
+                        <div class="presentation-content">{{excursion.presentation}}</div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="product-sidebar">
+                        <div class="sidebar-price">
+                             <span class="price-number" id="sidebar_price">2 Dhs<span class="price-currency"></span>
+                             </span>
+                            <div id="sidebar_details" data-minprice="13">
+                                POUR<b> 2</b> ADULTES
+                            </div>
+                        </div>
+
+                        <div class="sidebar-content">
+                            <form action="http://ribatour.com/reservation/form" method="get" class="sidebar-form" role="form">
+                                <input type="hidden" name="id" id="product_id" value="97">
+                                <div class="form-group">
+                                    <select class="form-control" name="adult" id="adult">
+                                        <option value="0">Adultes</option>
+                                        <option value="1" >1</option>
+                                        <option value="2" selected="selected">2</option>
+                                        <option value="3" >3</option>
+                                        <option value="4" >4</option>
+                                        <option value="5" >5</option>
+                                        <option value="6" >6</option>
+                                        <option value="7" >7</option>
+                                        <option value="8" >8</option>
+                                        <option value="9" >9</option>
+                                        <option value="10" >10</option>
+                                        <option value="11" >11</option>
+                                        <option value="12" >12</option>
+                                        <option value="13" >13</option>
+                                        <option value="14" >14</option>
+                                        <option value="15" >15</option>
+                                        <option value="16" >16</option>
+                                        <option value="17" >17</option>
+                                        <option value="18" >18</option>
+                                        <option value="19" >19</option>
+                                        <option value="20" >20</option>
+                                        <option value="21" >21</option>
+                                        <option value="22" >22</option>
+                                        <option value="23" >23</option>
+                                        <option value="24" >24</option>
+                                        <option value="25" >25</option>
+                                        <option value="26" >26</option>
+                                        <option value="27" >27</option>
+                                        <option value="28" >28</option>
+                                        <option value="29" >29</option>
+                                        <option value="30" >30</option>
+                                        <option value="31" >31</option>
+                                        <option value="32" >32</option>
+                                        <option value="33" >33</option>
+                                        <option value="34" >34</option>
+                                        <option value="35" >35</option>
+                                        <option value="36" >36</option>
+                                        <option value="37" >37</option>
+                                        <option value="38" >38</option>
+                                        <option value="39" >39</option>
+                                        <option value="40" >40</option>
+                                        <option value="41" >41</option>
+                                        <option value="42" >42</option>
+                                        <option value="43" >43</option>
+                                        <option value="44" >44</option>
+                                        <option value="45" >45</option>
+                                        <option value="46" >46</option>
+                                        <option value="47" >47</option>
+                                        <option value="48" >48</option>
+                                        <option value="49" >49</option>
+                                        <option value="50" >50</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <select class="form-control" name="enfant" id="enfant">
+                                        <option value="0">Enfants</option>
+                                        <option value="1" >1</option>
+                                        <option value="2" >2</option>
+                                        <option value="3" >3</option>
+                                        <option value="4" >4</option>
+                                        <option value="5" >5</option>
+                                        <option value="6" >6</option>
+                                        <option value="7" >7</option>
+                                        <option value="8" >8</option>
+                                        <option value="9" >9</option>
+                                        <option value="10" >10</option>
+                                        <option value="11" >11</option>
+                                        <option value="12" >12</option>
+                                        <option value="13" >13</option>
+                                        <option value="14" >14</option>
+                                        <option value="15" >15</option>
+                                        <option value="16" >16</option>
+                                        <option value="17" >17</option>
+                                        <option value="18" >18</option>
+                                        <option value="19" >19</option>
+                                        <option value="20" >20</option>
+                                        <option value="21" >21</option>
+                                        <option value="22" >22</option>
+                                        <option value="23" >23</option>
+                                        <option value="24" >24</option>
+                                        <option value="25" >25</option>
+                                        <option value="26" >26</option>
+                                        <option value="27" >27</option>
+                                        <option value="28" >28</option>
+                                        <option value="29" >29</option>
+                                        <option value="30" >30</option>
+                                        <option value="31" >31</option>
+                                        <option value="32" >32</option>
+                                        <option value="33" >33</option>
+                                        <option value="34" >34</option>
+                                        <option value="35" >35</option>
+                                        <option value="36" >36</option>
+                                        <option value="37" >37</option>
+                                        <option value="38" >38</option>
+                                        <option value="39" >39</option>
+                                        <option value="40" >40</option>
+                                        <option value="41" >41</option>
+                                        <option value="42" >42</option>
+                                        <option value="43" >43</option>
+                                        <option value="44" >44</option>
+                                        <option value="45" >45</option>
+                                        <option value="46" >46</option>
+                                        <option value="47" >47</option>
+                                        <option value="48" >48</option>
+                                        <option value="49" >49</option>
+                                        <option value="50" >50</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="date" placeholder="Date" class="form-control date-input date-time-picker" value="19/09/2020">
+                                </div>
+                                <div class="form-group" >
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="private"  value="1" id="private_option">Excursion privée</label>
+                                    </div>
+                                </div>
+                                <div class="product-btns">
+                                    <button class="btn add-cart-btn btn btn-style-2 btn-yellow" type="submit">Reserver</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- /.Product-sidebar-->
+                    <div class="product-sidebar">
+                        <div class="sidebar-content">
+                            <img src="/images/icon-services-client.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="sidebar-content">
+                            <div class="sidebar-contacts">
+                                <div class="sidebar-contacts-item">
+                                    <span class="circle-icon"> <span class="icons-product-phone"></span> </span>+212 245 111 000</div>
+                                <div class="sidebar-contacts-item">
+                                    <span class="circle-icon"> <span class="icons-product-message"></span> </span>contact@ribatour.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}

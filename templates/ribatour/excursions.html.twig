@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title  %} excursions {% endblock %}
+{% block body %}
+
+    <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
+        <div class="container">
+            <h2>Excursions</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
+    <section class="tour-one">
+        <div class="container">
+            <div class="block-title text-center">
+                <p>Notre Liste</p>
+                <h3>Des Excursions</h3>
+            </div><!-- /.block-title -->
+            <div class="container">
+                <div class="products-list content-grid">
+                    <div class="row">
+                        {% for excursion in excursions %}
+                            <div class="col-xl-4 col-lg-6">
+                                <div class="tour-one__single">
+                                    <div class="tour-one__image">
+                                        <img src="{{excursion.images}}" alt="">
+                                        <a href="tour-details.html"><i class="fa fa-heart"></i></a>
+                                    </div><!-- /.tour-one__image -->
+                                    <div class="tour-one__content">
+                                        <div class="tour-one__stars">
+                                        </div><!-- /.tour-one__stars -->
+                                        <h3><a href="tour-details.html">{{excursion.nom}}</a></h3>
+                                        <p><span>{{excursion.prixadulte}}$</span> / par personne</p>
+                                    </div><!-- /.tour-one__content -->
+                                </div><!-- /.tour-one__single -->
+                            </div><!-- /.col-lg-4 -->
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

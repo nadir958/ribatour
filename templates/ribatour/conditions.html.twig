@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title  %} RIBATOUR {% endblock %}
+{% block body %}
+<nav id="nav" role="navigation">
+    <a href="#nav" title="Show navigation">Afficher navigation</a>
+    <a href="#" title="Hide navigation">Masque navigation</a>
+
+    <ul class="clearfix container">
+        <li class=""><a href="{{ path('ribatour') }}"> Accueil</a></li>
+        <li class=""><a href="{{ path('excursions') }}">Excursions </a></li>
+        <li class=""><a href="{{ path('transferts') }}">Transferts </a></li>
+        <li class=""><a href="{{ path('about') }}">Qui sommes nous ? </a></li>
+        <li class=""><a href="{{ path('contact') }}">Contact </a></li>
+    </ul>
+</nav>
+<section class="page-content page-details page-panier inner-page">
+
+    <div class="container">
+        <h2>Termes et conditions</h2>
+        <div class="content"></div>
+    </div>
+
+
+</section>
+{% endblock %}
