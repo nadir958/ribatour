@@ -3,12 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicons/favicon-16x16.png') }}">
+        <link rel="manifest"  href="{{ asset('images/favicons/site.webmanifest') }}">
+
+
+        <link rel="manifest" href="assets/images/favicons/site.webmanifest">
 
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('css/style.min.css') }}">
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-            <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+
+
+            <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+            <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+            <link rel="stylesheet" href="{{asset('css/swiper.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/fontawesome-all.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/tripo-icons.css')}}">
+            <link rel="stylesheet" href="{{asset('css/jquery.mCustomScrollbar.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/vegas.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/nouislider.min.css')}}">
+            <link rel="stylesheet" href="{{asset('css/nouislider.pips.css')}}">
+
+            <!-- template styles -->
+            <link rel="stylesheet" href="{{asset('css/style.css')}}">
+            <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
         {% endblock %}
     </head>
     <body>
@@ -17,8 +42,26 @@
         {% block body %}{% endblock %}
 
         {% block javascripts %}
-            <script src="{{ asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script>
-            <script src="{{ asset('js/script.min.js') }}"></script>
+
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+            <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('js/waypoints.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
+            <script src="{{ asset('js/wow.js') }}"></script>
+            <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+            <script src="{{ asset('js/typed-2.0.11.js') }}"></script>
+            <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
+            <script src="{{ asset('js/vegas.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+            <script src="{{ asset('js/countdown.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+            <script src="{{ asset('js/nouislider.min.js') }}"></script>
+            <script src="{{ asset('assets/js/isotope.js') }}"></script>
+
+
         {% endblock %}
 
         {% include 'footer.html.twig' %}

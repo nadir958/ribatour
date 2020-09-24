@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ExcursionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -10,16 +11,22 @@ class RibatourController extends AbstractController
     /**
      * @Route("/", name="ribatour")
      */
-    public function index()
+    public function index(ExcursionRepository $repository)
     {
-        return $this->render('ribatour\index.html.twig');
+        $excursions = $repository->findAll();
+        return $this->render('ribatour\index.html.twig',[
+            'excursions'=>$excursions,
+        ]);
     }
     /**
      * @Route("/excursions", name="excursions")
      */
-    public function excursions()
+    public function excursions(ExcursionRepository $repository)
     {
-        return $this->render('ribatour\excursions.html.twig');
+        $excursions = $repository->findAll();
+        return $this->render('ribatour\excursions.html.twig',[
+            'excursions'=>$excursions,
+        ]);
     }
     /**
      * @Route("/transferts", name="transferts")
@@ -42,13 +49,14 @@ class RibatourController extends AbstractController
     {
         return $this->render('ribatour\contact.html.twig');
     }
-    public function headerAction(Request $request)
+    /**
+     * @Route("/conditions", name="conditions")
+     */
+    public function conditions()
     {
-        return $this->render('header.html.twig');
+        return $this->render('ribatour\conditions.html.twig');
     }
 
-    public function footerAction(Request $request)
-    {
-        return $this->render('footer.html.twig');
-    }
+
+
 }

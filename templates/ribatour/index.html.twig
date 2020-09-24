@@ -1,498 +1,99 @@
 {% extends 'base.html.twig' %}
 {% block title  %} RIBATOUR {% endblock %}
 {% block body %}
-    <nav id="nav" role="navigation">
-        <a href="#nav" title="Show navigation">Afficher navigation</a>
-        <a href="#" title="Hide navigation">Masque navigation</a>
-
-        <ul class="clearfix container">
-            <li class="active"><a href="{{ path('ribatour') }}"> Accueil</a></li>
-            <li class=""><a href="{{ path('excursions') }}">Excursions </a></li>
-            <li class=""><a href="{{ path('transferts') }}">Transferts </a></li>
-            <li class=""><a href="{{ path('about') }}">Qui sommes nous ? </a></li>
-            <li class=""><a href="{{ path('contact') }}">Contact </a></li>
-        </ul>
-    </nav>
-    <div class="page-content">
-        <div class="home-slider-wrapper">
-            <div id="homeSlider" class="carousel home-slider slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators hidden-xs">
-                    <li data-target="#homeSlider" data-slide-to="0" class="active"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="photos/home-slider/4.jpg" alt="Excursion & transfert ">
-                        <div class="carousel-caption">
-
-                        </div>
-                    </div>
-
-
-
-                </div> <!-- /.carousel-inner -->
-
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#homeSlider" role="button" data-slide="prev">
-                    <span class="carousel-arr-left" aria-hidden="true"> <span class="icons-arr-left"></span> </span>
-                    <span class="sr-only">Previous</span>
-                </a>
-
-                <a class="right carousel-control" href="#homeSlider" role="button" data-slide="next">
-                    <span class="carousel-arr-right" aria-hidden="true"> <span class="icons-arr-right"></span> </span>
-                    <span class="sr-only">Next</span>
-                </a>
-
-            </div> <!-- /#homeSlider -->
-
-            <span class="close-icon open-icon" id="form-show">
-                <span class=""><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACkUlEQVQ4T53Uv2sUQRQH8Pdm97oUCsaISpC9xirJ7Ey8IoIXRLAUISpGI6bRmN7CP0GxSUAtogkY8ceBhaSJP+JFtHDdH+GwMqfXqwkGDyyy855M4OQ47rLqtguf931v3gxCxlcsFt16vX6WiEaZWQshdhDRDyHEB0R80NXV9bBcLqcNBrfzlFIHmbnEzL1CiHlmXmbmNUTcxcxHEPEcIn5xHOdUEASfrNURtBgRvUXEd67rjgdBsNZaXErZjYizzFzI5XJDFm0L2jY3NjZiRKzl8/mTpVKJtNYXAWCYiCpxHN9o4CMjI061Wn0mhNjreZ5uC2qtx4wx07lczguCYN33/RkAWIzj+Em7EfX19e12XbcKABNtQd/3FxGxGkXRpNZ6nIjqnbBGAaXUbUQ80BaUUtrBT1hEa30/DMPzWdugtT7DzFNtQaUUEdGxJEleaa2vhmF4PQuUUh61Y+kErjPz5aw2m4tsm1BK+RwAqkmSXMlK1vjv+/4dAOjtlPACEU0JIfJRFH3PQguFQk+apvaUL7UDhVJqFgDGAGDB87wTpVLJdELtHtZqtQUi6snn84OtYAPTdobM/BQR36dpOl6pVL62ojaZMWaOmZUxZmhlZWW1GbTYPQAY3NzcHLaAUmoYAJaY+ad9CBBx2RjzzXGcbiIqIqJ9MFaJ6LTFmu+yxe4CwKEG1t/fv8913dcAUGbmN0KIUWOMBoCdQgi7BSEiznue97h5JDah0FrP2AveijHzUhzHEwDAWQfz5/lSSt0EgOMtWBkAXkZRZNfmr7GtlqWUvxzHGQzD8GOhUNifpqlt87+wLXBgYOCz4zi3mLmMiI+I6EWSJJP/mqy55cNENCeE2ENE00mSXPtfzKK/ASCqXUDb9/yTAAAAAElFTkSuQmCC"
-                            alt="Rtours"></span>
-            </span>
-
-            <!-- /.silder-form-wrapper -->
-
-
-        </div> <!-- /.home-slider-wrapper -->
+    <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <div class="search-form">
-                <!-- TAB NAVIGATION -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#tab1" role="tab" data-toggle="tab">
-                            <i class="fa fa-search"></i>
-                            <b>Excursions & Circuits</b>
-                            <span>Chercher une excursion ou un circuit au maroc</span>
-                        </a></li>
-                    <li><a href="#tab2" role="tab" data-toggle="tab">
-                            <i class="fa fa-search"></i>
-                            <b>Transfers</b>
-                            <span>Choisissez votre trajet</span>
-                        </a></li>
-                </ul>
-                <!-- TAB CONTENT -->
-                <div class="tab-content">
-                    <div class="tab-pane fade active in" id="tab1">
-                        <form action="http://ribatour.com/excursions" method="get" class="form-inline" role="form">
-
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="q" value="" placeholder="Mot clé">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control date-time-picker" name="date" placeholder="Date"
-                                       value="">
-                            </div>
-
-                            <div class="form-group">
-                                <select type="text" class="form-control" name="destination" id="">
-                                    <option value="0">Par destination</option>
-                                    <option value="2">Agadir</option>
-                                    <option value="9">Casablanca</option>
-                                    <option value="11">Chefchaouen</option>
-                                    <option value="5">Desert & kasbahs</option>
-                                    <option value="12">Desert & Kasbahs</option>
-                                    <option value="3">Essaouira</option>
-                                    <option value="7">Fès</option>
-                                    <option value="25">Ifrane</option>
-                                    <option value="4">Imlil</option>
-                                    <option value="1">Marrakech</option>
-                                    <option value="16">Marrakech, Palmeraie</option>
-                                    <option value="19">Meknès</option>
-                                    <option value="15">Merzouga</option>
-                                    <option value="23">Moulay Yacoub</option>
-                                    <option value="24">Moyen Atlas</option>
-                                    <option value="17">Oualidia</option>
-                                    <option value="13">Ouzoud</option>
-                                    <option value="8">Rabat</option>
-                                    <option value="18">Safi</option>
-                                    <option value="27">Sefrou</option>
-                                    <option value="10">Tanger</option>
-                                    <option value="20">Taroudant</option>
-                                    <option value="22">Taza</option>
-                                    <option value="21">Tétouan</option>
-                                    <option value="14">Zagora</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Chercher</button>
-                        </form>
-                    </div>
-
-                    <div class="tab-pane fade " id="tab2">
-                        <form action="http://ribatour.com/transferts" method="get" class="form-inline" role="form">
-
-                            <div class="form-group">
-                                <select type="text" class="form-control" name="" id="" placeholder="">
-                                    <option value="0">Destination départ</option>
-                                    <option value="2">Agadir</option>
-                                    <option value="9">Casablanca</option>
-                                    <option value="11">Chefchaouen</option>
-                                    <option value="5">Desert & kasbahs</option>
-                                    <option value="12">Desert & Kasbahs</option>
-                                    <option value="3">Essaouira</option>
-                                    <option value="7">Fès</option>
-                                    <option value="25">Ifrane</option>
-                                    <option value="4">Imlil</option>
-                                    <option value="1">Marrakech</option>
-                                    <option value="16">Marrakech, Palmeraie</option>
-                                    <option value="19">Meknès</option>
-                                    <option value="15">Merzouga</option>
-                                    <option value="23">Moulay Yacoub</option>
-                                    <option value="24">Moyen Atlas</option>
-                                    <option value="17">Oualidia</option>
-                                    <option value="13">Ouzoud</option>
-                                    <option value="8">Rabat</option>
-                                    <option value="18">Safi</option>
-                                    <option value="27">Sefrou</option>
-                                    <option value="10">Tanger</option>
-                                    <option value="20">Taroudant</option>
-                                    <option value="22">Taza</option>
-                                    <option value="21">Tétouan</option>
-                                    <option value="14">Zagora</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <select class="form-control" name="" id="" placeholder="">
-                                    <option value="0">Destination arrivée</option>
-                                    <option value="2">Agadir</option>
-                                    <option value="9">Casablanca</option>
-                                    <option value="11">Chefchaouen</option>
-                                    <option value="5">Desert & kasbahs</option>
-                                    <option value="12">Desert & Kasbahs</option>
-                                    <option value="3">Essaouira</option>
-                                    <option value="7">Fès</option>
-                                    <option value="25">Ifrane</option>
-                                    <option value="4">Imlil</option>
-                                    <option value="1">Marrakech</option>
-                                    <option value="16">Marrakech, Palmeraie</option>
-                                    <option value="19">Meknès</option>
-                                    <option value="15">Merzouga</option>
-                                    <option value="23">Moulay Yacoub</option>
-                                    <option value="24">Moyen Atlas</option>
-                                    <option value="17">Oualidia</option>
-                                    <option value="13">Ouzoud</option>
-                                    <option value="8">Rabat</option>
-                                    <option value="18">Safi</option>
-                                    <option value="27">Sefrou</option>
-                                    <option value="10">Tanger</option>
-                                    <option value="20">Taroudant</option>
-                                    <option value="22">Taza</option>
-                                    <option value="21">Tétouan</option>
-                                    <option value="14">Zagora</option>
-                                </select>
-                            </div>
-
-
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Chercher</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-main-content home-products">
-            <div class="container">
-                <h2 class="main-title">
-                    Notre selection </h2>
-
-                <div class="container">
-                    <div class="products-list content-grid">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/97-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P240617180551.jpg" alt="Photo Excursion 3 Vallées">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/97-article.html"> Excursion
-                                                    3 Vallées </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">13
-                                                        &euro; <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/97-article.html" class="product-more">+ PLUS D'INFOS</a>
-                                            <a href="excursions/97-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/98-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001120.jpg" alt="Photo Nuit dans le désert">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/98-article.html"> Nuit dans
-                                                    le désert </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">50
-                                                        &euro;
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/98-article.html" class="product-more">+ PLUS D'INFOS</a>
-                                            <a href="excursions/98-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/99-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001130.jpg" alt="Photo Green Fees 18 trous">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/99-article.html"> Green
-                                                    Fees 18 trous </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">0 &euro;
-                                                        <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/99-article.html" class="product-more">+ PLUS D'INFOS</a>
-                                            <a href="excursions/99-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/100-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001238.jpg" alt="Photo Samanah Golf">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/100-article.html"> Samanah
-                                                    Golf </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">0 &euro;
-                                                        <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/100-article.html" class="product-more">+ PLUS
-                                                D'INFOS</a>
-                                            <a href="excursions/100-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="home-main-content home-products">
-            <div class="container">
-                <h2 class="main-title">
-                    Popular excursions </h2>
-
-                <div class="container">
-                    <div class="products-list content-grid">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/101-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001223.jpg" alt="Photo Palmeraie Golf">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/101-article.html">
-                                                    Palmeraie Golf </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">0 &euro;
-                                                        <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/101-article.html" class="product-more">+ PLUS
-                                                D'INFOS</a>
-                                            <a href="excursions/101-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/102-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001157.jpg" alt="Photo Diner gastronomique">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/102-article.html"> Diner
-                                                    gastronomique </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">0 &euro;
-                                                        <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/102-article.html" class="product-more">+ PLUS
-                                                D'INFOS</a>
-                                            <a href="excursions/102-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/98-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001120.jpg" alt="Photo Nuit dans le désert">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/98-article.html"> Nuit dans
-                                                    le désert </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">0 &euro;
-                                                        <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/98-article.html" class="product-more">+ PLUS D'INFOS</a>
-                                            <a href="excursions/98-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="grid-item grid-item-product grid-item-product2">
-                                    <a href="excursions/99-article.html" class="item-thumbnail to-hover">
-                                        <img src="photos/P220417001130.jpg" alt="Photo Green Fees 18 trous">
-                                        <span class="on-hover"></span>
-                                    </a>
-
-                                    <div class="item-content">
-                                        <div class="item-title">
-                                            <h3 class="item-title-title"><a href="excursions/99-article.html"> Green
-                                                    Fees 18 trous </a> </h3>
-
-                                            <div class="item-price">
-                                                <div class="price-label">à partir de <span class="price-number">0 &euro;
-                                                        <span class="price-currency"> Par personne</span>
-
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="item-footer">
-                                        <div class="product-actions">
-                                            <a href="excursions/99-article.html" class="product-more">+ PLUS D'INFOS</a>
-                                            <a href="excursions/99-article.html" class="product-book"><i
-                                                        class="icon-cart"></i> Réserver</a>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-
-
-
-
-    </div>
+            <h2>Find your <span>next tour</span></h2>
+            <p>Where would you like to go?</p>
+            <form class="tour-search-one" action="http://layerdrops.com/tripo/tour-sidebar.html">
+                <div class="tour-search-one__inner">
+                    <div class="tour-search-one__inputs">
+                        <div class="tour-search-one__input-box">
+                            <label for="place">Where to</label>
+                            <input type="text" placeholder="Enter keywords" name="place" id="place">
+                        </div><!-- /.tour-search-one__input-box -->
+                        <div class="tour-search-one__input-box">
+                            <label for="when">When</label>
+                            <input type="text" placeholder="September" name="when" id="when">
+                        </div><!-- /.tour-search-one__input-box -->
+                        <div class="tour-search-one__input-box">
+                            <label for="type">Type</label>
+                            <select class="selectpicker" id="type">
+                                <option value="Adventure">Adventure</option>
+                                <option value="Wildlife">Wildlife</option>
+                                <option value="Sightseeing">Sightseeing</option>
+                            </select>
+                        </div><!-- /.tour-search-one__input-box -->
+                    </div><!-- /.tour-search-one__inputs -->
+                    <div class="tour-search-one__btn-wrap">
+                        <button type="submit" class="thm-btn tour-search-one__btn">Find now</button>
+                    </div><!-- /.tour-search-one__btn-wrap -->
+                </div><!-- /.tour-search-one__inner -->
+            </form><!-- /.tour-search-one -->
+        </div><!-- /.container -->
+    </section><!-- /.banner-one -->
+    <section class="features-one__title">
+        <div class="container">
+            <div class="block-title text-center">
+                <p>Call our agents to book!</p>
+                <h3>Tripo Award Winning and Top <br> Rated Tour Operator</h3>
+            </div><!-- /.block-title -->
+        </div><!-- /.container -->
+    </section><!-- /.features-one__title -->
+    <section class="features-one__content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="000ms">
+                    <div class="features-one__single">
+                        <i class=" tripo-icon-tour-guide"></i>
+                        <h3>8000+ Our Local <br> Guides</h3>
+                    </div><!-- /.features-one__single -->
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+                    <div class="features-one__single">
+                        <i class=" tripo-icon-reliability"></i>
+                        <h3>100% Trusted Tour <br> Agency</h3>
+                    </div><!-- /.features-one__single -->
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                    <div class="features-one__single">
+                        <i class=" tripo-icon-user-experience"></i>
+                        <h3>28+ Years of Travel <br> Experience</h3>
+                    </div><!-- /.features-one__single -->
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                    <div class="features-one__single">
+                        <i class=" tripo-icon-feedback"></i>
+                        <h3>98% Our Travelers <br> are Happy</h3>
+                    </div><!-- /.features-one__single -->
+                </div><!-- /.col-lg-3 col-md-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.features-one__content -->
+    <section class="tour-one">
+        <div class="container">
+            <div class="block-title text-center">
+                <p>Featured tours</p>
+                <h3>Most Popular Tours</h3>
+            </div><!-- /.block-title -->
+            <div class="row">
+                {% for excursion in excursions %}
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image">
+                                <img src="{{excursion.images}}" alt="">
+                                <a href="tour-details.html"><i class="fa fa-heart"></i></a>
+                            </div><!-- /.tour-one__image -->
+                            <div class="tour-one__content">
+                                <div class="tour-one__stars">
+                                </div><!-- /.tour-one__stars -->
+                                <h3><a href="tour-details.html">{{excursion.nom}}</a></h3>
+                                <p><span>{{excursion.prixadulte}}$</span> / par personne</p>
+                            </div><!-- /.tour-one__content -->
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                {% endfor %}
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.tour-one -->
 {% endblock %}

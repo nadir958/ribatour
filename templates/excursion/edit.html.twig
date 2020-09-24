@@ -1,0 +1,105 @@
+{% extends 'excursion/dashboard_base.html.twig' %}
+
+{% block title %}Edit Excursion{% endblock %}
+
+{% block body %}
+<div class="sidebar-nav">
+    <div class="sidebar-nav-body">
+        <div class="side-menu-close">
+            <i class="la la-times"></i>
+        </div><!-- end menu-toggler -->
+        <div class="author-content">
+            <div class="d-flex align-items-center">
+
+                <div class="author-bio">
+                    <h4 class="author__title">Admin</h4>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-menu-wrap">
+            <ul class="sidebar-menu list-items">
+                <li class="page-active"><a href="{{ path('excursion_index') }}"><i class="la la-dashboard mr-2"></i>Gerer Excursions</a></li>
+                <li ><a href="{{ path('excursion_index') }}"><i class="la la-shopping-cart mr-2"></i>My Booking</a></li>
+                <li><a href="{{ path('ribatour') }}"><i class="la la-power-off mr-2 text-color-6"></i>Logout</a></li>
+            </ul>
+        </div><!-- end sidebar-menu-wrap -->
+    </div>
+</div><!-- end sidebar-nav -->
+<!-- ================================
+       END DASHBOARD NAV
+================================= -->
+
+<!-- ================================
+    START DASHBOARD AREA
+================================= -->
+<section class="dashboard-area">
+    <div class="dashboard-nav">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="menu-wrapper">
+                        <div class="logo mr-5">
+                            <a href="index.html"><img src="{{asset('images/travelagency-logo.png')}}" alt="logo"></a>
+                            <div class="menu-toggler">
+                                <i class="la la-bars"></i>
+                                <i class="la la-times"></i>
+                            </div><!-- end menu-toggler -->
+                            <div class="user-menu-open">
+                                <i class="la la-user"></i>
+                            </div><!-- end user-menu-open -->
+                        </div>
+                    </div><!-- end menu-wrapper -->
+                </div><!-- end col-lg-12 -->
+            </div><!-- end row -->
+        </div><!-- end container-fluid -->
+    </div><!-- end dashboard-nav -->
+    <div class="dashboard-content-wrap">
+        <div class="dashboard-bread dashboard--bread">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="breadcrumb-content">
+                            <div class="section-heading">
+                                <h2 class="sec__title font-size-30">Ribatour Dashboard</h2>
+                            </div>
+                        </div><!-- end breadcrumb-content -->
+                    </div><!-- end col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="breadcrumb-list">
+                            <ul class="list-items d-flex justify-content-end">
+                                <li><a href="{{ path('excursion_index') }}" class="text-white">Dashboard</a></li>
+                                <li><a href="{{ path('excursion_new') }}" class="text-white">Nouvelle Excursion</a></li>
+                            </ul>
+                        </div><!-- end breadcrumb-list -->
+                    </div><!-- end col-lg-6 -->
+                </div><!-- end row -->
+            </div>
+        </div><!-- end dashboard-bread -->
+        <div class="dashboard-main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-box">
+                            <div class="form-title-wrap">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h3 class="title">Modifier Excursion : {{ excursion.nom }}</h3>
+                                    </div>
+                                    <button class="btn btn-info"><a style="color: white" href="{{ path('excursion_index') }}">Annuler</a></button>
+                                </div>
+                            </div>
+                            <div class="form-content">
+                                {{ include('excursion/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
+                                {{ include('excursion/_delete_form.html.twig') }}
+                            </div>
+                        </div><!-- end form-box -->
+                    </div><!-- end col-lg-12 -->
+                </div><!-- end row -->
+
+                <div class="border-top mt-5"></div>
+            </div><!-- end container-fluid -->
+
+
+
+
+{% endblock %}

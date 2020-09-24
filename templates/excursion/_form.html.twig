@@ -1,0 +1,27 @@
+{% extends 'excursion/dashboard_base.html.twig' %}
+{% block body %}
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col-6">
+            <img src="{{ excursion.images }}" style="width:80%" alt="{{ excursion.nom }}">
+            <div>{{ form_row(form.images) }}</div>
+        </div>
+        <div class="col-6">
+            <div>{{ form_row(form.nom)}}</div>
+            <div>{{ form_row(form.prixadulte,{"label":" Prix Adulte ($)" }) }}</div>
+            <div>{{ form_row(form.prixenfant,{ "label":" Prix Enfant ($)" }) }}</div>
+        </div>
+        <div class="col-12">
+            <div class="">{{ form_row(form.presentation) }}</div>
+        </div>
+    </div>
+    {{ form_widget(form) }}
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-success">{{ button_label|default('Sauvegarder') }}</button>
+            </div>
+        </div>
+    </div>
+{{ form_end(form) }}
+{% endblock %}
