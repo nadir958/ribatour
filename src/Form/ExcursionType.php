@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Excursion;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,7 +16,7 @@ class ExcursionType extends AbstractType
             ->add('nom')
             ->add('prixadulte')
             ->add('prixenfant')
-            ->add('images')
+            ->add('imagesFile',FileType::class,['required'=>false])
             ->add('presentation')
         ;
     }

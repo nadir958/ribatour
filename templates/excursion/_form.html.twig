@@ -3,8 +3,8 @@
 {{ form_start(form) }}
     <div class="row">
         <div class="col-6">
-            <img src="{{ excursion.images }}" style="width:80%" alt="{{ excursion.nom }}">
-            <div>{{ form_row(form.images) }}</div>
+            <img src="{{ asset('photos/excursions/'~excursion.images) }}" style="width:80%" alt="{{ excursion.nom }}">
+            <div>{{ form_row(form.imagesFile) }}</div>
         </div>
         <div class="col-6">
             <div>{{ form_row(form.nom)}}</div>
@@ -12,7 +12,7 @@
             <div>{{ form_row(form.prixenfant,{ "label":" Prix Enfant ($)" }) }}</div>
         </div>
         <div class="col-12">
-            <div class="">{{ form_row(form.presentation) }}</div>
+            {{ form_row(form.presentation) }}
         </div>
     </div>
     {{ form_widget(form) }}

@@ -2,11 +2,16 @@
 
 namespace App\Entity;
 
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Repository\ExcursionRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Entity(repositoryClass=ExcursionRepository::class)
+ * @Vich\Uploadable
  */
 class Excursion
 {
@@ -36,11 +41,20 @@ class Excursion
      * @ORM\Column(type="string", length=255)
      */
     private $images;
+    /**
+     * @Vich\UploadableField(mapping="excursion_image", fileNameProperty="images")
+     */
+    private $imagesFile;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $presentation;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updated_at;
 
 
     public function getId(): ?int
@@ -89,7 +103,7 @@ class Excursion
         return $this->images;
     }
 
-    public function setImages(string $images): self
+    public function setImages(?string $images = null): self
     {
         $this->images = $images;
 
@@ -104,6 +118,30 @@ class Excursion
     public function setPresentation(string $presentation): self
     {
         $this->presentation = $presentation;
+
+        return $this;
+    }
+    public function getImagesFile(): ?File
+    {
+        return $this->imagesFile;
+    }
+    public function setImagesFile(?File $imagesFile): self
+    {
+        $this->imagesFile = $imagesFile;
+        if($this->imagesFile instanceof UploadedFile){
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    {
+        $this->updated_at = $updated_at;
 
         return $this;
     }
