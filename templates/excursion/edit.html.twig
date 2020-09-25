@@ -18,8 +18,8 @@
         </div>
         <div class="sidebar-menu-wrap">
             <ul class="sidebar-menu list-items">
-                <li class="page-active"><a href="{{ path('excursion_index') }}"><i class="la la-dashboard mr-2"></i>Gerer Excursions</a></li>
-                <li ><a href="{{ path('excursion_index') }}"><i class="la la-shopping-cart mr-2"></i>My Booking</a></li>
+                <li class="page-active"><a href="{{ path('excursion_index') }}"><i class="la la-list-ul mr-2"></i>Excursions</a></li>
+                <li ><a href="{{ path('excursion_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion</a></li>
                 <li><a href="{{ path('ribatour') }}"><i class="la la-power-off mr-2 text-color-6"></i>Logout</a></li>
             </ul>
         </div><!-- end sidebar-menu-wrap -->
@@ -85,12 +85,11 @@
                                     <div>
                                         <h3 class="title">Modifier Excursion : {{ excursion.nom }}</h3>
                                     </div>
-                                    <button class="btn btn-info"><a style="color: white" href="{{ path('excursion_index') }}">Annuler</a></button>
+                                    <button class="btn btn-info"><a style="color: white" href="{{ path('excursion_index') }}">Retour</a></button>
                                 </div>
                             </div>
                             <div class="form-content">
                                 {{ include('excursion/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
-                                {{ include('excursion/_delete_form.html.twig') }}
                             </div>
                         </div><!-- end form-box -->
                     </div><!-- end col-lg-12 -->
