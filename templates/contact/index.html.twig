@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
+        <div class="container">
+            <h2>Contact</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
+    <section class="contact-info-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contact-info-one__single">
+                        <div class="contact-info-one__icon">
+                            <i class="tripo-icon-placeholder"></i>
+                        </div><!-- /.contact-info-one__icon -->
+                        <div class="contact-info-one__content">
+                            <p>77 Broklyn Street, D Capital <br>
+                                Road New York. USA 6666</p>
+                        </div><!-- /.contact-info-one__content -->
+                    </div><!-- /.contact-info-one__single -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="contact-info-one__single">
+                        <div class="contact-info-one__icon">
+                            <i class="tripo-icon-phone-call"></i>
+                        </div><!-- /.contact-info-one__icon -->
+                        <div class="contact-info-one__content">
+                            <p>Local: <a href="tel:666-999-0000">666 999 0000</a> <br>
+                                Mobile: <a href="tel:+123-456-hello">+ 123 456 hello</a></p>
+                        </div><!-- /.contact-info-one__content -->
+                    </div><!-- /.contact-info-one__single -->
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="contact-info-one__single">
+                        <div class="contact-info-one__icon">
+                            <i class="tripo-icon-message"></i>
+                        </div><!-- /.contact-info-one__icon -->
+                        <div class="contact-info-one__content">
+                            <p><a href="mailto:needhelp@tripo.com">needhelp@tripo.com</a> <br>
+                                <a href="mailto:info@tripo.com">info@tripo.com</a></p>
+                        </div><!-- /.contact-info-one__content -->
+                    </div><!-- /.contact-info-one__single -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.contact-info-one -->
+
+    <section class="contact-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact-one__content">
+                        <div class="block-title text-left">
+                            <p>Contact with us</p>
+                            <h3>Have any Question? <br>
+                                feel free to contact <br>
+                                with us.</h3>
+                        </div><!-- /.block-title -->
+                        <div class="contact-one__content-text">
+                            <p>Lorem ipsum available isn but the majority have suffered alteratin <br> in some or form
+                                injected.</p>
+                        </div><!-- /.contact-one__content-text -->
+                        <div class="contact-one__social">
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div><!-- /.contact-one__social -->
+                    </div><!-- /.contact-one__content -->
+                </div><!-- /.col-lg-5 -->
+                <div class="col-lg-7">
+                    {{ form(contactForm) }}
+                </div><!-- /.col-lg-7 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.contact-one -->
+
+{% endblock %}

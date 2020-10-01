@@ -43,18 +43,18 @@ class RibatourController extends AbstractController
         return $this->render('ribatour\about.html.twig');
     }
     /**
-     * @Route("/contact", name="contact")
-     */
-    public function contact()
-    {
-        return $this->render('ribatour\contact.html.twig');
-    }
-    /**
      * @Route("/conditions", name="conditions")
      */
     public function conditions()
     {
         return $this->render('ribatour\conditions.html.twig');
+    }
+    /**
+     * @Route("/success", name="success")
+     */
+    public function success()
+    {
+        return $this->render('ribatour\reservation_success.html.twig');
     }
 
 

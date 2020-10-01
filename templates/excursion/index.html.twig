@@ -21,7 +21,7 @@
                 <ul class="sidebar-menu list-items">
                     <li class="page-active"><a href="{{ path('excursion_index') }}"><i class="la la-list-ul mr-2"></i>Excursions</a></li>
                     <li ><a href="{{ path('excursion_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion</a></li>
-                    <li><a href="{{ path('ribatour') }}"><i class="la la-power-off mr-2 text-color-6"></i>Déconnecter</a></li>
+                    <li><a href="{{ path('app_logout') }}"><i class="la la-power-off mr-2 text-color-6"></i>Déconnecter</a></li>
                 </ul>
             </div><!-- end sidebar-menu-wrap -->
         </div>
@@ -87,7 +87,7 @@
                                             <h3 class="title">List des Excursions</h3>
                                             <p class="font-size-14"></p>
                                         </div>
-                                        <span>Total <strong class="color-text">(17)</strong></span>
+                                        <span>Total <strong class="color-text">({{ excursions | length }})</strong></span>
                                     </div>
                                 </div>
 
@@ -101,18 +101,16 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th scope="col">id</th>
-                                                <th scope="col">nom</th>
-                                                <th scope="col">prix adulte</th>
-                                                <th scope="col">prix enfant</th>
-                                                <th scope="col">presentation</th>
-                                                <th scope="col">action</th>
+                                                <th scope="col">Nom</th>
+                                                <th scope="col">Prix adulte</th>
+                                                <th scope="col">Prix enfant</th>
+                                                <th scope="col">Presentation</th>
+                                                <th scope="col">Action</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             {% for excursion in excursions %}
                                             <tr>
-                                                <th scope="row">{{ excursion.id }}</th>
                                                 <td>
                                                     <div class="table-content">
                                                         <h3 class="title">{{ excursion.nom }}</h3>
@@ -122,10 +120,10 @@
                                                 <td>{{ excursion.prixenfant }} $</td>
                                                 <td>{{ excursion.presentation }}</td>
                                                 <td>
-                                                    <div class="table-content">
+                                                    <div class="table-content ">
                                                         {{ include('excursion/_delete_form.html.twig') }}
 
-                                                        <button class="btn btn-warning m-1"><a style="color: black" href="{{ path('excursion_edit', {'id': excursion.id}) }}">Modifier</a></button>
+                                                        <button class="btn btn-warning btn-block m-1"><a style="color: black" href="{{ path('excursion_edit', {'id': excursion.id}) }}">Modifier</a></button>
                                                     </div>
                                                 </td>
                                             </tr>
