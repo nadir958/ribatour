@@ -3,8 +3,8 @@
 {% block body %}
     <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <h2>Find your <span>next tour</span></h2>
-            <p>Where would you like to go?</p>
+            <h2>Visiter <span>Marrakech</span></h2>
+            <p>Où voudrais-tu aller?</p>
             <form class="tour-search-one" action="http://layerdrops.com/tripo/tour-sidebar.html">
                 <div class="tour-search-one__inner">
                     <div class="tour-search-one__inputs">
@@ -35,8 +35,8 @@
     <section class="features-one__title">
         <div class="container">
             <div class="block-title text-center">
-                <p>Call our agents to book!</p>
-                <h3>Tripo Award Winning and Top <br> Rated Tour Operator</h3>
+                <p>APPELEZ NOS AGENTS POUR RÉSERVER!</p>
+                <h3>Voyager avec le meilleur <br> opérateur de Marrakech</h3>
             </div><!-- /.block-title -->
         </div><!-- /.container -->
     </section><!-- /.features-one__title -->
@@ -46,25 +46,25 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="000ms">
                     <div class="features-one__single">
                         <i class=" tripo-icon-tour-guide"></i>
-                        <h3>8000+ Our Local <br> Guides</h3>
+                        <h3>Guides locaux<br>  <br>  </h3>
                     </div><!-- /.features-one__single -->
                 </div><!-- /.col-lg-3 col-md-6 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                     <div class="features-one__single">
                         <i class=" tripo-icon-reliability"></i>
-                        <h3>100% Trusted Tour <br> Agency</h3>
+                        <h3>100% Agence de voyages <br> de confiance</h3>
                     </div><!-- /.features-one__single -->
                 </div><!-- /.col-lg-3 col-md-6 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                     <div class="features-one__single">
                         <i class=" tripo-icon-user-experience"></i>
-                        <h3>28+ Years of Travel <br> Experience</h3>
+                        <h3>28+ Années de voyage <br> et d'expérience</h3>
                     </div><!-- /.features-one__single -->
                 </div><!-- /.col-lg-3 col-md-6 -->
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                     <div class="features-one__single">
                         <i class=" tripo-icon-feedback"></i>
-                        <h3>98% Our Travelers <br> are Happy</h3>
+                        <h3>98% Nos voyageurs <br> sont heureux</h3>
                     </div><!-- /.features-one__single -->
                 </div><!-- /.col-lg-3 col-md-6 -->
             </div><!-- /.row -->
@@ -73,8 +73,8 @@
     <section class="tour-one">
         <div class="container">
             <div class="block-title text-center">
-                <p>Featured tours</p>
-                <h3>Most Popular Tours</h3>
+                <p>TOURS EN VEDETTE</p>
+                <h3>Tours les plus populaires</h3>
             </div><!-- /.block-title -->
             <div class="row">
                 {% for excursion in excursions %}
@@ -87,8 +87,9 @@
                             <div class="tour-one__content">
                                 <div class="tour-one__stars">
                                 </div><!-- /.tour-one__stars -->
-                                <h3><a href="tour-details.html">{{excursion.nom}}</a></h3>
-                                <p><span>{{excursion.prixadulte}}$</span> / par personne</p>
+                                <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
+                                <p><span>{{excursion.prixadulte}}$</span> / Prix adulte
+                                <span class="ma">{{excursion.prixenfant}}$</span> / prix enfant</p>
                             </div><!-- /.tour-one__content -->
                         </div><!-- /.tour-one__single -->
                     </div><!-- /.col-lg-4 -->

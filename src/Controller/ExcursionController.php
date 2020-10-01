@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Excursion;
+use App\Form\ContactType;
 use App\Form\ExcursionType;
+use App\Form\ReservationType;
 use App\Repository\ExcursionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -51,13 +53,35 @@ class ExcursionController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="excursion_show", methods={"GET"})
+     * @Route("/{id}", name="excursion_show", methods={"GET","POST"})
      */
-    public function show(Excursion $excursion): Response
+    public function show(Excursion $excursion,Request $request, \Swift_Mailer $mailer): Response
     {
-        return $this->render('excursion/show.html.twig', [
-            'excursion' => $excursion,
-        ]);
+        $form = $this->createForm(ReservationType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $reservation = $form->getData();
+
+            // Ici nous enverrons l'e-mail
+            $message = (new \Swift_Message('Nouvelle Reservation'))
+                //expediteur
+                ->SetFrom($reservation['email'])
+                //destinataire
+                ->SetTo('layoune95@gmail.com')
+                //view
+                ->setBody(
+                    $this->renderView(
+                        'emails/reservation.html.twig',compact('reservation','excursion')
+                    ),
+                    'text/html'
+                );
+            //envoyer le message
+            $mailer->send($message);
+
+            return $this->redirectToRoute('success');
+        }
+        return $this->render('excursion/show.html.twig',['reservationForm' => $form->createView(),'excursion' => $excursion,]);
     }
 
     /**

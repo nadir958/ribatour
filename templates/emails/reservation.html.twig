@@ -1,0 +1,12 @@
+<h1>Reservation</h1>
+<p>type excursion : {{ excursion.nom }}</p>
+<p>Nom : {{ reservation.nom }}</p>
+<p>Prenom : {{ reservation.prenom }}</p>
+<p>Tel : {{ reservation.Tel }}</p>
+<p>Email : {{ reservation.email }}</p>
+<p>Nombre Adulte : {{ reservation.nombreAdulte }}</p>
+<p>Nombre Enfant : {{ reservation.NombreEnfant }}</p>
+<p>Date Reservation : {{ reservation.DateDebut|date('Y-m-d') }}</p>
+<p>Date Reservation : {{ reservation.DateFin|date('Y-m-d') }}</p>
+
+<p>Message : {{ reservation.message | raw }}</p>

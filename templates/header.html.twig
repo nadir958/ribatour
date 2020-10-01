@@ -19,11 +19,11 @@
         </div><!-- /.topbar-one -->
         <header class="main-nav__header-one">
             <nav class="header-navigation stricky">
-                <div class="container">
+                <div class="container" >
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="main-nav__logo-box">
-                        <a href="index.html" class="main-nav__logo">
-                            <img src="{{asset('images/travelagency-logo.png')}}" class="main-logo"
+                        <a href="{{ path('ribatour') }}" class="main-nav__logo">
+                            <img src="{{asset('images/travelagency-logo.png')}}"  width="123" class="main-logo"
                                  alt="Awesome Image" />
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i>
@@ -47,7 +47,7 @@
                         </ul>
                     </div><!-- /.navbar-collapse -->
                     <div class="main-nav__right">
-                        <a href="{{ path('excursion_index') }}" class="main-nav__login"><i class="tripo-icon-avatar"></i></a>
+                        <a href="{{ path('app_login') }}" class="main-nav__login"><i class="tripo-icon-avatar"></i></a>
                         <select name="currency" id="currency" class="selectpicker">
                             <option value="USD">USD</option>
                             <option value="GBP">DH</option>
