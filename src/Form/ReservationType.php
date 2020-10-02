@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Date;
+use Symfony\Component\Validator\Constraints\GreaterThanOrEqual;
 
 class ReservationType extends AbstractType
 {
@@ -23,15 +25,17 @@ class ReservationType extends AbstractType
             ->add('nombreAdulte',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('NombreEnfant',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('DateDebut', DateType::class, [
-                'widget' => 'choice',  'format' => 'yyyy MM dd','invalid_message' => 'entrer un nombre',
+                'widget' => 'choice',  'format' => 'yyyy MM dd','invalid_message' => 'entrer une date',
                 'placeholder' => [
                     'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
-                ]])
-            ->add('DateFin', DateType::class, [
-                'widget' => 'choice',  'format' => 'yyyy MM dd','invalid_message' => 'entrer un nombre',
-                'placeholder' => [
-                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
-                ]])
+                ],'constraints'=>[new GreaterThanOrEqual("today"),],'data' => new \DateTime(),
+            ])
+            ->add('DateFin', DateType::class,
+                ['widget' => 'choice',  'format' => 'yyyy MM dd','invalid_message' => 'entrer une date',
+                'placeholder' => ['year' => 'Année', 'month' => 'Mois', 'day' => 'Jour', ],'constraints'=>[new GreaterThanOrEqual(['propertyPath' => 'parent.all[DateDebut].data']),]
+                    ,'data' => new \DateTime(),
+                ]
+            )
             ->add('message',TextareaType::class)
             ->add('envoyer',SubmitType::class)
         ;

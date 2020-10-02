@@ -1,12 +1,49 @@
-<h1>Reservation</h1>
-<p>type excursion : {{ excursion.nom }}</p>
-<p>Nom : {{ reservation.nom }}</p>
-<p>Prenom : {{ reservation.prenom }}</p>
-<p>Tel : {{ reservation.Tel }}</p>
-<p>Email : {{ reservation.email }}</p>
-<p>Nombre Adulte : {{ reservation.nombreAdulte }}</p>
-<p>Nombre Enfant : {{ reservation.NombreEnfant }}</p>
-<p>Date Reservation : {{ reservation.DateDebut|date('Y-m-d') }}</p>
-<p>Date Reservation : {{ reservation.DateFin|date('Y-m-d') }}</p>
 
-<p>Message : {{ reservation.message | raw }}</p>
+{% block body %}
+
+    <h1 style="text-align: center;color: Tomato;">Reservation d'excursion : {{ "now"|date("m/d/Y H:i", "Africa/Casablanca") }}</h1>
+<table class="table" style="border-collapse: collapse;border: 1px solid black;width: 100%;font-size: large">
+    <tbody>
+    <tr>
+        <th scope="row" style="height: 50px;">type excursion :</th>
+        <td>{{ excursion.nom }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Nom :</th>
+        <td>{{ reservation.nom }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Prenom :</th>
+        <td>{{ reservation.prenom }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Tel :</th>
+        <td>{{ reservation.Tel }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Email :</th>
+        <td>{{ reservation.email }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Nombre Adulte :</th>
+        <td>{{ reservation.nombreAdulte }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Nombre Enfant :</th>
+        <td>{{ reservation.NombreEnfant }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Date debut :</th>
+        <td>{{ reservation.DateDebut|date('Y-m-d') }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Date fin :</th>
+        <td>{{ reservation.DateFin|date('Y-m-d') }}</td>
+    </tr>
+    <tr>
+        <th scope="row" style="height: 50px;">Message :</th>
+        <td>{{ reservation.message | raw }}</td>
+    </tr>
+    </tbody>
+</table>
+{% endblock %}
