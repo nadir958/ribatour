@@ -23,26 +23,26 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="main-nav__logo-box">
                         <a href="{{ path('ribatour') }}" class="main-nav__logo">
-                            <img src="{{asset('images/travelagency-logo.png')}}"  width="123" class="main-logo"
-                                 alt="Awesome Image" />
+                            <img src="{{asset('images/travelagency-logo.png')}}"  width="123" class="main-logo" alt="Ribators logo" />
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i>
                             <!-- /.smpl-icon-menu --></a>
                     </div><!-- /.logo-box -->
                     <!-- Collect the nav links, forms, and other content for toggling -->
+                    {% set route_name = app.request.attributes.get('_route') %}
                     <div class="main-nav__main-navigation">
                         <ul class=" main-nav__navigation-box">
-                            <li class="dropdown">
+                            <li {% if route_name == "ribatour" %} class="current" {% else %} class="nav-item" {% endif %} >
                                 <a href="{{ path('ribatour') }}">Accueil</a>
                             </li>
-                            <li class="dropdown">
+                            <li {% if route_name == "excursions" %} class="current" {% else %} class="nav-item" {% endif %} >
                                 <a href="{{ path('excursions') }}">Excursions</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="{{ path('about') }}">Qui Somme nous ?</a>
+                            <li {% if route_name == "about" %} class="current" {% else %} class="nav-item" {% endif %} >
+                            <a href="{{ path('about') }}">Qui Somme nous ?</a>
                             </li>
-                            <li>
-                                <a href="{{ path('contact') }}">Contacter Nous</a>
+                            <li {% if route_name == "contact" %} class="current" {% else %} class="nav-item" {% endif %} >
+                            <a href="{{ path('contact') }}">Contacter Nous</a>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->

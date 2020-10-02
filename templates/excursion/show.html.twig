@@ -36,7 +36,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="tour-details__gallery-image">
-                                    <img src="{{ asset('photos/excursions/'~excursion.images) }}" width="800" height="400" alt="">
+                                    <img src="{{ asset('photos/excursions/'~excursion.images)| imagine_filter('carre') }}"  alt="{{ excursion.nom }}">
                                 </div><!-- /.tour-details__gallery-image -->
                             </div><!-- /.swiper-slide -->
                     </div><!-- /.tour-details__gallery-carousel -->
@@ -51,7 +51,7 @@
             <div class="col-lg-4">
                 <div class="tour-sidebar">
                     <div class="tour-sidebar__search tour-sidebar__single">
-                        <h3>Reserver</h3>
+                        <h3 style="text-align: center">Reserver</h3>
                         {{ form(reservationForm) }}
                     </div><!-- /.tour-sidebar__search -->
                 </div>

@@ -1,5 +1,24 @@
-<h1>Contact</h1>
-<p>Nom : {{ contact.nom }}</p>
-<p>Prenom : {{ contact.prenom }}</p>
-<p>Email : {{ contact.email }}</p>
-<p>Message : {{ contact.message | raw }}</p>
+{% block body %}
+
+    <h1 style="text-align: center;color: Tomato;">Message de contact Ribatours le : {{ "now"|date("m/d/Y H:i", "Africa/Casablanca") }}</h1>
+    <table class="table" style="border-collapse: collapse;border: 1px solid black;width: 100%;font-size: large">
+        <tbody>
+        <tr>
+            <th scope="row" style="height: 50px;">Nom :</th>
+            <td>{{ contact.nom }}</td>
+        </tr>
+        <tr>
+            <th scope="row" style="height: 50px;">Prenom :</th>
+            <td>{{ contact.prenom }}</td>
+        </tr>
+        <tr>
+            <th scope="row" style="height: 50px;">Contact email :</th>
+            <td>{{ contact.email }}</td>
+        </tr>
+        <tr>
+            <th scope="row" style="height: 50px;">Message :</th>
+            <td>{{ contact.message | raw }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
