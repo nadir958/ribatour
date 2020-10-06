@@ -16,6 +16,7 @@ class ExcursionType extends AbstractType
     {
         $builder
             ->add('nom')
+            ->add('ville')
             ->add('prixadulte',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('prixenfant',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('imagesFile',FileType::class,['required'=>false])

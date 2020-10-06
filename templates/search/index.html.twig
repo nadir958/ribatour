@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rechercher une excursion{% endblock %}
+{% block body %}
+    {{ form_start(searchForm) }}
+    <form class="tour-search-one">
+        <div class="tour-search-one__inner">
+            <div class="tour-search-one__inputs">
+                <div class="tour-search-one__input-box">
+                    <label for="place"></label>
+                    {{ form_row(searchForm.nom,{"label":"Excursion" }) }}
+                </div><!-- /.tour-search-one__input-box -->
+                <div class="tour-search-one__input-box">
+                    <label for="place"></label>
+                    {{ form_row(searchForm.ville,{"label":"Ville" }) }}
+                </div><!-- /.tour-search-one__input-box -->
+                <div class="tour-search-one__input-box">
+                    <label for="when">Date</label>
+                    <input type="date" id="date" name="date">
+                </div><!-- /.tour-search-one__input-box -->
+            </div><!-- /.tour-search-one__inputs -->
+            <div class="tour-search-one__btn-wrap">
+                <button class="thm-btn tour-search-one__btn">rechercher</button>
+            </div><!-- /.tour-search-one__btn-wrap -->
+        </div><!-- /.tour-search-one__inner -->
+    </form><!-- /.tour-search-one -->
+    {{ form_end(searchForm) }}
+{% endblock %}

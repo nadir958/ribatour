@@ -13,11 +13,11 @@
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div><!-- /.topbar-one__social -->
-                </div><!-- /.topbar-one__right -->
-            </div><!-- /.container-fluid -->
+                    </div><!-- /.toone__right -->
+                </div><!-- /.containepbar-one__social -->
+                </div><!-- /.topbar-r-fluid -->
         </div><!-- /.topbar-one -->
-        <header class="main-nav__header-one">
+        <header role="banner" class="main-nav__header-one">
             <nav class="header-navigation stricky">
                 <div class="container" >
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,10 +48,6 @@
                     </div><!-- /.navbar-collapse -->
                     <div class="main-nav__right">
                         <a href="{{ path('app_login') }}" class="main-nav__login"><i class="tripo-icon-avatar"></i></a>
-                        <select name="currency" id="currency" class="selectpicker">
-                            <option value="USD">USD</option>
-                            <option value="GBP">DH</option>
-                        </select><!-- /#currency .selectpicker -->
                         <select name="languages" id="languages" class="selectpicker">
                             <option value="ENG">FR</option>
                             <option value="BN">EN</option>
@@ -62,5 +58,6 @@
             </nav>
         </header><!-- /.site-header -->
     </div><!-- /.site-header__header-one-wrap -->
+
 
 {% endblock %}

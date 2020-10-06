@@ -25,13 +25,13 @@ class ReservationType extends AbstractType
             ->add('nombreAdulte',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('NombreEnfant',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('DateDebut', DateType::class, [
-                'widget' => 'choice',  'format' => 'yyyy MM dd','invalid_message' => 'entrer une date',
+                'widget' => 'single_text', 'html5' => false, 'format' => 'dd/MM/yyyy','invalid_message' => 'entrer une date',
                 'placeholder' => [
                     'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
                 ],'constraints'=>[new GreaterThanOrEqual("today"),],'data' => new \DateTime(),
             ])
             ->add('DateFin', DateType::class,
-                ['widget' => 'choice',  'format' => 'yyyy MM dd','invalid_message' => 'entrer une date',
+                ['widget' => 'single_text','html5' => false,  'format' => 'dd/MM/yyyy','invalid_message' => 'entrer une date',
                 'placeholder' => ['year' => 'Année', 'month' => 'Mois', 'day' => 'Jour', ],'constraints'=>[new GreaterThanOrEqual(['propertyPath' => 'parent.all[DateDebut].data']),]
                     ,'data' => new \DateTime(),
                 ]
