@@ -3,30 +3,26 @@
 {% block body %}
     <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <h2>Visiter <span>Marrakech</span></h2>
+            <h2>Visiter <span>le Maroc</span></h2>
             <p>Où voudrais-tu aller?</p>
-            <form class="tour-search-one" action="http://layerdrops.com/tripo/tour-sidebar.html">
+            <form class="tour-search-one">
                 <div class="tour-search-one__inner">
                     <div class="tour-search-one__inputs">
                         <div class="tour-search-one__input-box">
-                            <label for="place">Where to</label>
-                            <input type="text" placeholder="Enter keywords" name="place" id="place">
+                            <label for="place">Excursion</label>
+                            <input type="text" placeholder="Excursion 3 Vallées" name="place" id="place">
                         </div><!-- /.tour-search-one__input-box -->
                         <div class="tour-search-one__input-box">
-                            <label for="when">When</label>
-                            <input type="text" placeholder="September" name="when" id="when">
+                            <label for="when">Ville</label>
+                            <input type="text" placeholder="Marrakech" name="when" id="when">
                         </div><!-- /.tour-search-one__input-box -->
                         <div class="tour-search-one__input-box">
-                            <label for="type">Type</label>
-                            <select class="selectpicker" id="type">
-                                <option value="Adventure">Adventure</option>
-                                <option value="Wildlife">Wildlife</option>
-                                <option value="Sightseeing">Sightseeing</option>
-                            </select>
+                            <label for="type">Date</label>
+                            <input type="date" id="date" name="date">
                         </div><!-- /.tour-search-one__input-box -->
                     </div><!-- /.tour-search-one__inputs -->
                     <div class="tour-search-one__btn-wrap">
-                        <button type="submit" class="thm-btn tour-search-one__btn">Find now</button>
+                        <a class="thm-btn tour-search-one__btn" style="text-align: center" href="{{path('excursions')}}">Chercher</a>
                     </div><!-- /.tour-search-one__btn-wrap -->
                 </div><!-- /.tour-search-one__inner -->
             </form><!-- /.tour-search-one -->
@@ -82,11 +78,12 @@
                         <div class="tour-one__single">
                             <div class="tour-one__image">
                                 <img src="{{ asset('photos/excursions/'~excursion.images) }}" alt="">
-                                <a href="tour-details.html"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
                             </div><!-- /.tour-one__image -->
                             <div class="tour-one__content">
-                                <div class="tour-one__stars">
-                                </div><!-- /.tour-one__stars -->
+                                <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
+                                    {{excursion.ville}}
+                                </div><!-- /.tour-one__ville -->
                                 <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
                                 <p><span>{{excursion.prixadulte}}$</span> / Prix adulte
                                 <span class="ma">{{excursion.prixenfant}}$</span> / prix enfant</p>
