@@ -1,3 +1,19 @@
 .ma{
     margin-left: 20px;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .tour-search-one__inner{
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hometitle{
+        text-align: center;
+    }
+    .site-footer{
+        text-align: center;
+    }
+}

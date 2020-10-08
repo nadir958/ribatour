@@ -3,29 +3,13 @@
 {% block body %}
     <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <h2>Visiter <span>le Maroc</span></h2>
-            <p>Où voudrais-tu aller?</p>
-            <form class="tour-search-one">
-                <div class="tour-search-one__inner">
-                    <div class="tour-search-one__inputs">
-                        <div class="tour-search-one__input-box">
-                            <label for="place">Excursion</label>
-                            <input type="text" placeholder="Excursion 3 Vallées" name="place" id="place">
-                        </div><!-- /.tour-search-one__input-box -->
-                        <div class="tour-search-one__input-box">
-                            <label for="when">Ville</label>
-                            <input type="text" placeholder="Marrakech" name="when" id="when">
-                        </div><!-- /.tour-search-one__input-box -->
-                        <div class="tour-search-one__input-box">
-                            <label for="type">Date</label>
-                            <input type="date" id="date" name="date">
-                        </div><!-- /.tour-search-one__input-box -->
-                    </div><!-- /.tour-search-one__inputs -->
-                    <div class="tour-search-one__btn-wrap">
-                        <a class="thm-btn tour-search-one__btn" style="text-align: center" href="{{path('excursions')}}">Chercher</a>
-                    </div><!-- /.tour-search-one__btn-wrap -->
-                </div><!-- /.tour-search-one__inner -->
-            </form><!-- /.tour-search-one -->
+            <div class="hometitle">
+                <h2>Visiter <span>le Maroc</span></h2>
+                <p>Où voudrais-tu aller?</p>
+                <div class="col text-center">
+                    <a class="thm-btn tour-search-one__btn" style="text-align: center" href="{{path('search')}}">Chercher</a>
+                </div><!-- /.tour-search-one__btn-wrap -->
+            </div>
         </div><!-- /.container -->
     </section><!-- /.banner-one -->
     <section class="features-one__title">
@@ -60,7 +44,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
                     <div class="features-one__single">
                         <i class=" tripo-icon-feedback"></i>
-                        <h3>98% Nos voyageurs <br> sont heureux</h3>
+                        <h3>98% Nos voyageurs <br> sont satisfait</h3>
                     </div><!-- /.features-one__single -->
                 </div><!-- /.col-lg-3 col-md-6 -->
             </div><!-- /.row -->
