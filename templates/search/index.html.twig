@@ -2,27 +2,70 @@
 
 {% block title %}Rechercher une excursion{% endblock %}
 {% block body %}
-    {{ form_start(searchForm) }}
-    <form class="tour-search-one">
-        <div class="tour-search-one__inner">
-            <div class="tour-search-one__inputs">
-                <div class="tour-search-one__input-box">
-                    <label for="place"></label>
-                    {{ form_row(searchForm.nom,{"label":"Excursion" }) }}
-                </div><!-- /.tour-search-one__input-box -->
-                <div class="tour-search-one__input-box">
-                    <label for="place"></label>
-                    {{ form_row(searchForm.ville,{"label":"Ville" }) }}
-                </div><!-- /.tour-search-one__input-box -->
-                <div class="tour-search-one__input-box">
-                    <label for="when">Date</label>
-                    <input type="date" id="date" name="date">
-                </div><!-- /.tour-search-one__input-box -->
-            </div><!-- /.tour-search-one__inputs -->
-            <div class="tour-search-one__btn-wrap">
-                <button class="thm-btn tour-search-one__btn">rechercher</button>
-            </div><!-- /.tour-search-one__btn-wrap -->
-        </div><!-- /.tour-search-one__inner -->
-    </form><!-- /.tour-search-one -->
-    {{ form_end(searchForm) }}
+
+
+   <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
+      <div class="container" style="text-align: center">
+         <h2 style="text-align: center">choisir <span>votre tour</span></h2>
+         <p style="text-align: center">Où voudrais-tu aller?</p>
+         {{ form_start(searchForm) }}
+         <form class="tour-search-one" >
+            <div class="tour-search-one__inner" style="background-color: white">
+               <div class="tour-search-one__inputs">
+                  <div class="tour-search-one__input-box">
+                     <label for="when"></label>
+                     {{ form_row(searchForm.nom)}}
+                  </div><!-- /.tour-search-one__input-box -->
+                  <div class="tour-search-one__input-box">
+                     <label for="when"></label>
+                     {{ form_row(searchForm.ville)}}
+                  </div><!-- /.tour-search-one__input-box -->
+                  <div class="tour-search-one__input-box">
+                     <label for="when" style="margin-top: -25px">Date</label>
+                     <input type="date" name="Date">
+                  </div><!-- /.tour-search-one__btn-wrap -->
+               </div><!-- /.tour-search-one__inputs -->
+
+               <div class="tour-search-one__btn-wrap">
+                  <div class="col text-center">
+                     {{ form_end(searchForm) }}
+                  </div><!-- /.tour-search-one__btn-wrap -->
+               </div>
+            </div><!-- /.tour-search-one__inner -->
+         </form><!-- /.tour-search-one -->
+      </div><!-- /.container -->
+   </section><!-- /.banner-one -->
+
+
+   <section class="tour-one">
+      <div class="container">
+         <div class="block-title text-center">
+            <h3>liste des resultats</h3>
+         </div><!-- /.block-title -->
+         <div class="row">
+            {% for excursion in excursions %}
+               <div class="col-xl-4 col-lg-6">
+                  <div class="tour-one__single">
+                     <div class="tour-one__image">
+                        <img src="{{ asset('photos/excursions/'~excursion.images) }}" alt="">
+                        <a href="#"><i class="fa fa-heart"></i></a>
+                     </div><!-- /.tour-one__image -->
+                     <div class="tour-one__content">
+                        <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
+                           {{excursion.ville}}
+                        </div><!-- /.tour-one__ville -->
+                        <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
+                        <p><span>{{excursion.prixadulte}}$</span> / Prix adulte
+                           <span class="ma">{{excursion.prixenfant}}$</span> / prix enfant</p>
+                     </div><!-- /.tour-one__content -->
+                  </div><!-- /.tour-one__single -->
+               </div><!-- /.col-lg-4 -->
+            {% endfor %}
+         </div><!-- /.row -->
+      </div><!-- /.container -->
+   </section><!-- /.tour-one -->
+
+
+
+
 {% endblock %}
