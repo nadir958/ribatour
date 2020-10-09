@@ -4,10 +4,8 @@ namespace App\Form;
 
 
 use App\Entity\Excursion;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\ChoiceList\ChoiceList;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,8 +16,8 @@ class SearchExcursionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom', TextType::class,['required' => false])
-            ->add('ville', TextType::class,['required' => false])
+            ->add('nom', TextType::class,['required' => false,])
+            ->add('ville', TextType::class,['required' => false,])
             ->add('chercher',SubmitType::class,[
                 'attr'=>[
                     'class'=>'thm-btn tour-search-one__btn',
