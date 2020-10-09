@@ -25,11 +25,11 @@ class SearchController extends AbstractController
             $nom = $excursion->getNom();
             $ville = $excursion->getVille();
             if ($nom != null and $ville != null) {
-                $excursions = $this->getDoctrine()->getRepository(Excursion::class)->findBy(['nom' => $nom,'ville'=>$ville]);
+                $excursions = $this->getDoctrine()->getRepository(Excursion::class)->search($nom,$ville);
             } elseif ($nom != null) {
-                $excursions = $this->getDoctrine()->getRepository(Excursion::class)->findBy(['nom' => $nom]);
+                $excursions = $this->getDoctrine()->getRepository(Excursion::class)->searchNom($nom);
             } elseif ($ville != null) {
-            $excursions = $this->getDoctrine()->getRepository(Excursion::class)->findBy(['ville' => $ville]);
+            $excursions = $this->getDoctrine()->getRepository(Excursion::class)->searchVille($ville);
             }else {
                 $excursions = $this->getDoctrine()->getRepository(Excursion::class)->findAll();
             }

@@ -18,6 +18,32 @@ class ExcursionRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Excursion::class);
     }
+    public function search($nom,$ville)
+    {
+        return $this->createQueryBuilder('excursion')
+            ->andWhere('excursion.nom LIKE :searchnom')
+            ->andWhere('excursion.ville LIKE :searchville')
+            ->setParameter('searchnom', '%'.$nom.'%')
+            ->setParameter('searchville', '%'.$ville.'%')
+            ->getQuery()
+            ->execute();
+    }
+    public function searchNom($nom)
+    {
+        return $this->createQueryBuilder('excursion')
+            ->andWhere('excursion.nom LIKE :searchTerm')
+            ->setParameter('searchTerm', '%'.$nom.'%')
+            ->getQuery()
+            ->execute();
+    }
+    public function searchVille($ville)
+    {
+        return $this->createQueryBuilder('excursion')
+            ->andWhere('excursion.ville LIKE :searchTerm')
+            ->setParameter('searchTerm', '%'.$ville.'%')
+            ->getQuery()
+            ->execute();
+    }
 
     // /**
     //  * @return Excursion[] Returns an array of Excursion objects
