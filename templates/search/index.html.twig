@@ -3,11 +3,10 @@
 {% block title %}Rechercher une excursion{% endblock %}
 {% block body %}
 
-
    <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
       <div class="container" style="text-align: center">
-         <h2 style="text-align: center">choisir <span>votre tour</span></h2>
-         <p style="text-align: center">Où voudrais-tu aller?</p>
+         <h2 style="text-align: center">{% trans %}chose <span>your tour{% endtrans %}</span></h2>
+         <p style="text-align: center">{% trans %}Where would you like to go?{% endtrans %}</p>
          {{ form_start(searchForm) }}
          <form class="tour-search-one" >
             <div class="tour-search-one__inner" style="background-color: white">
@@ -36,11 +35,10 @@
       </div><!-- /.container -->
    </section><!-- /.banner-one -->
 
-
    <section class="tour-one">
       <div class="container">
          <div class="block-title text-center">
-            <h3>liste des resultats</h3>
+            <h3>{% trans %}Result liste{% endtrans %}</h3>
          </div><!-- /.block-title -->
          <div class="row">
             {% for excursion in excursions %}
@@ -55,8 +53,8 @@
                            {{excursion.ville}}
                         </div><!-- /.tour-one__ville -->
                         <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
-                        <p><span>{{excursion.prixadulte}}$</span> / Prix adulte
-                           <span class="ma">{{excursion.prixenfant}}$</span> / prix enfant</p>
+                        <p><span>{{excursion.prixadulte}}$</span> / {% trans %}Adulte price{% transend %}
+                           <span class="ma">{{excursion.prixenfant}}$</span> / {% trans %}Child price{% transend %}</p>
                      </div><!-- /.tour-one__content -->
                   </div><!-- /.tour-one__single -->
                </div><!-- /.col-lg-4 -->

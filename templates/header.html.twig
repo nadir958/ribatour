@@ -14,8 +14,14 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div><!-- /.toone__right -->
+                    {% for locale in locales %}
+                        {% if locale != app.request.locale %}
+                                <a href="{{ path('change_locale',{'locale':locale}) }}" class="topbar-one__guide-btn">{{locale}}</a>
+                        {% endif %}
+                    {% endfor %}
+
                 </div><!-- /.containepbar-one__social -->
-                </div><!-- /.topbar-r-fluid -->
+            </div><!-- /.topbar-r-fluid -->
         </div><!-- /.topbar-one -->
         <header role="banner" class="main-nav__header-one">
             <nav class="header-navigation stricky">
@@ -33,25 +39,21 @@
                     <div class="main-nav__main-navigation">
                         <ul class=" main-nav__navigation-box">
                             <li {% if route_name == "ribatour" %} class="current" {% else %} class="nav-item" {% endif %} >
-                                <a href="{{ path('ribatour') }}">Accueil</a>
+                                <a href="{{ path('ribatour') }}">{% trans %}Home{% endtrans %}</a>
                             </li>
                             <li {% if route_name == "excursions" %} class="current" {% else %} class="nav-item" {% endif %} >
-                                <a href="{{ path('excursions') }}">Excursions</a>
+                                <a href="{{ path('excursions') }}">{% trans %}Excursions{% endtrans %}</a>
                             </li>
                             <li {% if route_name == "about" %} class="current" {% else %} class="nav-item" {% endif %} >
-                            <a href="{{ path('about') }}">Qui Somme nous ?</a>
+                            <a href="{{ path('about') }}">{% trans %}About Us{% endtrans %}</a>
                             </li>
                             <li {% if route_name == "contact" %} class="current" {% else %} class="nav-item" {% endif %} >
-                            <a href="{{ path('contact') }}">Contacter Nous</a>
+                            <a href="{{ path('contact') }}">{% trans %}Contact Us{% endtrans %}</a>
                             </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                     <div class="main-nav__right">
                         <a href="{{ path('app_login') }}" class="main-nav__login"><i class="tripo-icon-avatar"></i></a>
-                        <select name="languages" id="languages" class="selectpicker">
-                            <option value="ENG">FR</option>
-                            <option value="BN">EN</option>
-                        </select><!-- /#languages .selectpicker -->
                     </div><!-- /.main-nav__right -->
                 </div>
                 <!-- /.container -->
@@ -74,9 +76,8 @@
             </nav>
             <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
             <div class="side-menu__content">
-                <p>Ribat Tours est une agence de voyages et de Tourisme, crée en Mars 1983 et agrée par le ministère de Tourisme au Maroc.
-                    Ribat Tours est spécialisé dans les voyages culturels, sportifs, le trekking de tous ses genres,
-                    des séjours, des voyages à la carte et aussi votre propre proposition.</p>
+                <p>{% trans %}Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.
+                        Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.{% endtrans %}</p>
                 <p><a href="mailto:contact@ribatour.com">contact@ribatour.com</a> <br> <a href="tel:+212 245 111 000">+212 245 111 000</a></p>
                 <div class="side-menu__social">
                     <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -87,6 +88,5 @@
             </div><!-- /.side-menu__content -->
         </div><!-- /.side-menu__block-inner -->
     </div><!-- /.side-menu__block -->
-
 
 {% endblock %}
