@@ -102,6 +102,7 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">Nom</th>
+                                                <th scope="col">Ville</th>
                                                 <th scope="col">Prix adulte</th>
                                                 <th scope="col">Prix enfant</th>
                                                 <th scope="col">Presentation</th>
@@ -116,14 +117,18 @@
                                                         <h3 class="title">{{ excursion.nom }}</h3>
                                                     </div>
                                                 </td>
+                                                <td>{{ excursion.ville }} </td>
                                                 <td>{{ excursion.prixadulte }} $</td>
                                                 <td>{{ excursion.prixenfant }} $</td>
-                                                <td>{{ excursion.presentation }}</td>
+                                                <td>{{ excursion.presentation|length > 150 ? excursion.presentation|slice(0, 150) ~ '...' : excursion.presentation  }}</td>
+
                                                 <td>
                                                     <div class="table-content ">
                                                         {{ include('excursion/_delete_form.html.twig') }}
 
-                                                        <button class="btn btn-warning btn-block m-1"><a style="color: black" href="{{ path('excursion_edit', {'id': excursion.id}) }}">Modifier</a></button>
+                                                        <button class="btn btn-warning btn-block m-1">
+                                                            <a style="color: black" href="{{ path('excursion_edit', {'id': excursion.id}) }}">Modifier</a>
+                                                        </button>
                                                     </div>
                                                 </td>
                                             </tr>

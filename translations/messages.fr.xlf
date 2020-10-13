@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="jsEOVpH" resname="Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.&#10;                            Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.">
+        <source>Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.
+                            Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.</source>
+        <target>Ribat Tours est une agence de voyages et de tourisme, créée en mars 1983 et agréée par le ministère du Tourisme du Maroc.
+                Ribat Tours est spécialisé dans les voyages culturels et sportifs, les randonnées en tous genres, les séjours, les voyages à la carte et aussi votre propre proposition.</target>
+      </trans-unit>
+      <trans-unit id="R36tYBb" resname="société">
+        <source>société</source>
+        <target>Société</target>
+      </trans-unit>
+      <trans-unit id="XYxxq8U" resname="About Us">
+        <source>About Us</source>
+        <target>À propos de nous</target>
+      </trans-unit>
+      <trans-unit id="MOlumqf" resname="Conditions de vente">
+        <source>Conditions de vente</source>
+        <target>Conditions de vente</target>
+      </trans-unit>
+      <trans-unit id="l2sLV3l" resname="Contacter Nous">
+        <source>Contacter Nous</source>
+        <target>Contacter Nous</target>
+      </trans-unit>
+      <trans-unit id="kCTBl9h" resname="Links">
+        <source>Links</source>
+        <target>Liens</target>
+      </trans-unit>
+      <trans-unit id="1gHRCbc" resname="Excursions">
+        <source>Excursions</source>
+        <target>Excursions</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="r4gOuxx" resname="Conditions of sale">
+        <source>Conditions of sale</source>
+        <target>Conditions de vente</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="mLZwY8_" resname="Contact Us">
+        <source>Contact Us</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="n_il_Bs" resname="Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.&#10;                        Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.">
+        <source>Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.
+                        Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.</source>
+        <target>Ribat Tours est une agence de voyages et de tourisme, créée en mars 1983 et agréée par le ministère du Tourisme du Maroc.
+                                         Ribat Tours est spécialisé dans les voyages culturels et sportifs, les randonnées en tous genres, les séjours, les voyages à la carte et aussi votre propre proposition.</target>
+      </trans-unit>
+      <trans-unit id=".BnnZHt" resname="Who are we ?">
+        <source>Who are we ?</source>
+        <target>Qui sommes nous ?</target>
+      </trans-unit>
+      <trans-unit id="xt7yOCp" resname="Transport Agency">
+        <source>Transport Agency</source>
+        <target>Agence de transport</target>
+      </trans-unit>
+      <trans-unit id="lKvnlk1" resname="Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.">
+        <source>Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.</source>
+        <target>Ribat Tours est une agence de voyages et de tourisme, créée en mars 1983 et agréée par le ministère du Tourisme du Maroc.</target>
+      </trans-unit>
+      <trans-unit id="dTK4_TO" resname="Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.">
+        <source>Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.</source>
+        <target>Ribat Tours est spécialisé dans les voyages culturels et sportifs, les randonnées en tous genres, les séjours, les voyages à la carte et aussi votre propre proposition.</target>
+      </trans-unit>
+      <trans-unit id="IvqidwL" resname="Nos Produits">
+        <source>Nos Produits</source>
+        <target>Nos Produits</target>
+      </trans-unit>
+      <trans-unit id="5gCZe_U" resname="Esprit Ribat tours">
+        <source>Esprit Ribat tours</source>
+        <target>Esprit Ribat tours</target>
+      </trans-unit>
+      <trans-unit id="3E1qFKb" resname="Notre but">
+        <source>Notre but</source>
+        <target>Notre but</target>
+      </trans-unit>
+      <trans-unit id="XF0N3G4" resname="Our List">
+        <source>Our List</source>
+        <target>Notre List</target>
+      </trans-unit>
+      <trans-unit id="CDuq3hN" resname="Visit &lt;span&gt;Morocco">
+        <source>Visit &lt;span&gt;Morocco</source>
+        <target><![CDATA[Visiter <span>Le Maroc]]></target>
+      </trans-unit>
+      <trans-unit id="wCL6VCW" resname="Where would you like to go?">
+        <source>Where would you like to go?</source>
+        <target>Où voudrais-tu aller?</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Chercher</target>
+      </trans-unit>
+      <trans-unit id="1n70YgM" resname="CALL OUR AGENTS TO BOOK!">
+        <source>CALL OUR AGENTS TO BOOK!</source>
+        <target>APPELEZ NOS AGENTS POUR RÉSERVER!</target>
+      </trans-unit>
+      <trans-unit id="MyMfzYD" resname="Travel with the best &lt;br&gt; operator in Marrakech">
+        <source>Travel with the best &lt;br&gt; operator in Marrakech</source>
+        <target><![CDATA[Voyage avec le meilleur opérateur de <br> à Marrakech]]></target>
+      </trans-unit>
+      <trans-unit id="pv3zD8m" resname="Local Guides">
+        <source>Local Guides</source>
+        <target>Guides locaux</target>
+      </trans-unit>
+      <trans-unit id="rWLsLqx" resname="100% trusted  &lt;br&gt; travel agencys">
+        <source>100% trusted  &lt;br&gt; travel agencys</source>
+        <target><![CDATA[Agences de voyages <br> de confiance à 100%]]></target>
+      </trans-unit>
+      <trans-unit id="0V_go4t" resname="28+ Years of travel  &lt;br&gt; and experience">
+        <source>28+ Years of travel  &lt;br&gt; and experience</source>
+        <target>28 + Années de voyage et d'expérience</target>
+      </trans-unit>
+      <trans-unit id="Nruvqp_" resname="98% Our travelers &lt;br&gt; are satisfied">
+        <source>98% Our travelers &lt;br&gt; are satisfied</source>
+        <target><![CDATA[98% Nos voyageurs <br> sont satisfaits]]></target>
+      </trans-unit>
+      <trans-unit id="49urOGV" resname="FEATURED TOURS">
+        <source>FEATURED TOURS</source>
+        <target>TOURS EN VEDETTE</target>
+      </trans-unit>
+      <trans-unit id="sP2upoL" resname="Most popular tours">
+        <source>Most popular tours</source>
+        <target>Visites les plus populaires</target>
+      </trans-unit>
+      <trans-unit id="PVkja_R" resname="Thank you for your trust">
+        <source>Thank you for your trust</source>
+        <target>Merci pour votre confiance</target>
+      </trans-unit>
+      <trans-unit id="rKIEE0w" resname="your reservation has been made successfully &lt;/span&gt; &lt;br&gt; &lt;span&gt; &lt;/span&gt; we will contact you shortly to confirm your reservation">
+        <source>your reservation has been made successfully &lt;/span&gt; &lt;br&gt; &lt;span&gt; &lt;/span&gt; we will contact you shortly to confirm your reservation</source>
+        <target><![CDATA[votre réservation a été effectuée avec succès </span> <br> <span> </span> nous vous contacterons sous peu pour confirmer votre réservation]]></target>
+      </trans-unit>
+      <trans-unit id="8WjM3ZF" resname="company">
+        <source>company</source>
+        <target>compagnie</target>
+      </trans-unit>
+      <trans-unit id="R6rzG4P" resname="Contact us">
+        <source>Contact us</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="XV7hV3U" resname="Presentation">
+        <source>Presentation</source>
+        <target>Presentation</target>
+      </trans-unit>
+      <trans-unit id="JuxSI1z" resname="Adulte Price">
+        <source>Adulte Price</source>
+        <target>Prix edulte</target>
+      </trans-unit>
+      <trans-unit id="D20cT9K" resname="Child Price">
+        <source>Child Price</source>
+        <target>Prix enfant</target>
+      </trans-unit>
+      <trans-unit id="knGf4M_" resname="book">
+        <source>book</source>
+        <target>Reserver</target>
+      </trans-unit>
+      <trans-unit id="A70jxue" resname="Trekking and hiking (Mountains and desert: portage on mules or dromedaries)">
+        <source>Trekking and hiking (Mountains and desert: portage on mules or dromedaries)</source>
+        <target>Trekking et randonnées pédestres (Montagnes et désert:portage à dos de mules ou dromadaires)</target>
+      </trans-unit>
+      <trans-unit id="0YUUmq7" resname="Great Desert Escape with 4x4 Jeeps">
+        <source>Great Desert Escape with 4x4 Jeeps</source>
+        <target>Grande évasion du désert avec des  Jeep 4x4</target>
+      </trans-unit>
+      <trans-unit id="j..cGsN" resname="Mountain bike raids">
+        <source>Mountain bike raids</source>
+        <target>Raids en VTT</target>
+      </trans-unit>
+      <trans-unit id="Tcf_Xy0" resname="Nordic skiing">
+        <source>Nordic skiing</source>
+        <target>Ski de randonnée</target>
+      </trans-unit>
+      <trans-unit id="tyZs_tP" resname="Quad Raid">
+        <source>Quad Raid</source>
+        <target>Raid en Quad</target>
+      </trans-unit>
+      <trans-unit id="o4Flc0D" resname="Camel trek along the Atlantic">
+        <source>Camel trek along the Atlantic</source>
+        <target>Randonnée chamelière le long de l´Atlantique</target>
+      </trans-unit>
+      <trans-unit id="6Sgdf3l" resname="cultural trips by Bus or Jeep">
+        <source>cultural trips by Bus or Jeep</source>
+        <target>voyages culturels en Bus ou Jeep</target>
+      </trans-unit>
+      <trans-unit id="qmhIg50" resname="Meetings with Berber families">
+        <source>Meetings with Berber families</source>
+        <target>Des rencontres avec des familles Berbères</target>
+      </trans-unit>
+      <trans-unit id="aPBSeaG" resname="Tailor-made or themed trips">
+        <source>Tailor-made or themed trips</source>
+        <target>Des voyages à la carte ou à thème</target>
+      </trans-unit>
+      <trans-unit id="yUVwLJX" resname="Luxury bivouacs in the middle of the desert">
+        <source>Luxury bivouacs in the middle of the desert</source>
+        <target>Des bivouacs de luxe en plein désert</target>
+      </trans-unit>
+      <trans-unit id="bigW88G" resname="Thalasso">
+        <source>Thalasso</source>
+        <target>Thalasso</target>
+      </trans-unit>
+      <trans-unit id="X1jusBL" resname="We want with an open heart and full of joy, to bring you closer to a culture of an isolated population and to share with them their pleasure of life and to let you taste the charm of the silence of nature, which they live in. keeping a traditional life and wanting to live far from any civilization by sticking to the traditions of the country.">
+        <source>We want with an open heart and full of joy, to bring you closer to a culture of an isolated population and to share with them their pleasure of life and to let you taste the charm of the silence of nature, which they live in. keeping a traditional life and wanting to live far from any civilization by sticking to the traditions of the country.</source>
+        <target>Nous voulons avec un cœur ouvert et plein de joie, vous faire rapprocher  d´une  culture d´une population isolée et de partager avec eux leur plaisir de vie et de vous laisser goûter le charme du silence de la nature, qu´ils vivent en gardant une vie traditionnelle  et voulant vivre loin de toute civilisation en s´attachant aux traditions du pays.</target>
+      </trans-unit>
+      <trans-unit id="oZbBEhY" resname="We want with an open heart and full of joy, to bring you closer to a culture of an isolated population and to share with them their pleasure of life and to let you taste the charm of the silence of nature, that they live by keeping a traditional life and wanting to live far from any civilization by sticking to the traditions of the country.">
+        <source>We want with an open heart and full of joy, to bring you closer to a culture of an isolated population and to share with them their pleasure of life and to let you taste the charm of the silence of nature, that they live by keeping a traditional life and wanting to live far from any civilization by sticking to the traditions of the country.</source>
+        <target>Votre voyage avec nous, participera dans le développement de la vie sociale et économique de cette population oublié. Nous utilisons leur maison simple pour y passer une ou plusieurs nuits chez eux. Ils nous préparent  nos repas, leurs mules portent nos bagages. Nous sommes bien accueillis. C´est la culture  Berbère. Nos prix sont raisonnables afin de garantir à notre agence une clientèle gentille et propre.</target>
+      </trans-unit>
+      <trans-unit id="7F.G2b4" resname="You have questions?">
+        <source>You have questions?</source>
+        <target>Vous avez des questions?</target>
+      </trans-unit>
+      <trans-unit id="1wOknls" resname="Contact us on social networks">
+        <source>Contact us on social networks</source>
+        <target>Contactez-nous sur les réseaux sociaux</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

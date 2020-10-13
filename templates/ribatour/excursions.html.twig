@@ -4,14 +4,14 @@
 
     <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <h2>Excursions</h2>
+            <h2>{% trans %}Excursions{% endtrans %}</h2>
         </div><!-- /.container -->
     </section><!-- /.page-header -->
     <section class="tour-one">
         <div class="container">
             <div class="block-title text-center">
-                <p>Notre Liste</p>
-                <h3>Des Excursions</h3>
+                <p>{% trans %}TOURS{% endtrans %}</p>
+                <h3>{% trans %}Our List{% endtrans %}</h3>
             </div><!-- /.block-title -->
             <div class="container">
                 <div class="products-list content-grid">
@@ -27,7 +27,8 @@
                                         <div class="tour-one__stars">
                                         </div><!-- /.tour-one__stars -->
                                         <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
-                                        <p><span>{{excursion.prixadulte}}$</span> / par personne</p>
+                                        <p><span>{{excursion.prixadulte}}$</span> / Adult price
+                                            <span class="ma">{{excursion.prixenfant}}$</span> / Child price</p>
                                     </div><!-- /.tour-one__content -->
                                 </div><!-- /.tour-one__single -->
                             </div><!-- /.col-lg-4 -->

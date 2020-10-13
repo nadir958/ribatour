@@ -23,10 +23,10 @@
 
                         </div><!-- /.tour-two__top-left -->
                         <div class="tour-two__right">
-                            <p><span>{{ excursion.prixadulte }}$</span> <br> Prix Adulte</p>
+                            <p><span>{{ excursion.prixadulte }}$</span> <br> {% trans %}Adulte Price{% endtrans %}</p>
                         </div><!-- /.tour-two__right -->
                         <div class="tour-two__right">
-                            <p><span>{{ excursion.prixenfant }}$</span> <br> Prix enfant</p>
+                            <p><span>{{ excursion.prixenfant }}$</span> <br> {% trans %}Child Price{% endtrans %}</p>
                         </div><!-- /.tour-two__right -->
                     </div><!-- /.tour-two__top -->
                     <ul class="tour-one__meta list-unstyled"> </ul><!-- /.tour-one__meta -->
@@ -39,7 +39,7 @@
                                 </div><!-- /.tour-details__gallery-image -->
                             </div><!-- /.swiper-slide -->
                     </div><!-- /.tour-details__gallery-carousel -->
-                        <br/><h3 class="tour-details__title">Presentation</h3><!-- /.tour-details__title -->
+                        <br/><h3 class="tour-details__title">{% trans %}Presentation{% endtrans %}</h3><!-- /.tour-details__title -->
                     <p>{{ excursion.presentation }}</p>
                     <!-- /.tour-details__subtitle -->
                     </div>
@@ -50,7 +50,7 @@
             <div class="col-lg-4">
                 <div class="tour-sidebar">
                     <div class="tour-sidebar__search tour-sidebar__single">
-                        <h3 style="text-align: center">Reserver</h3>
+                        <h3 style="text-align: center">{% trans %}book{% endtrans %}</h3>
                         {{form_start(reservationForm)}}
                         {{form_row(reservationForm.nom)}}
                         {{form_row(reservationForm.prenom)}}

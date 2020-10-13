@@ -3,7 +3,7 @@
 {% block body %}
     <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <h2>Qui Somme Nous ?</h2>
+            <h2>{% trans %}Who are we ?{% endtrans%}</h2>
         </div><!-- /.container -->
     </section><!-- /.page-header -->
 
@@ -12,68 +12,64 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="destinations-details__content">
-                        <h3 class="destinations-details__title">Transport Agency</h3><!-- /.destinations-details__title -->
-                        <p>Ribat Tours est une agence de voyages et de Tourisme, cr&eacute;e en Mars 1983 et agr&eacute;e par le minist&egrave;re de Tourisme au Maroc.</p>
-                        <p>Ribat Tours est sp&eacute;cialis&eacute; dans les voyages culturels, sportifs, le trekking de tous ses genres, des s&eacute;jours, des voyages &agrave;
-                            la carte et aussi votre propre proposition. Ses guides dipl&ocirc;m&eacute;s et s&eacute;rieux connaissant bien le pays, vous font d&eacute;couvrir le
-                            paysage grandiose vari&eacute; du Maroc&nbsp;: Les villes imp&eacute;riales, le d&eacute;sert et les montagnes o&ugrave; vit une population loin de toute
-                            civilisation.</p>
+                        <h3 class="destinations-details__title">{% trans %}Transport Agency{% endtrans %}</h3><!-- /.destinations-details__title -->
+                        <p>{% trans %}Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.
+                                {% endtrans %}</p>
+                        <p>{% trans %}Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.{% endtrans %}</p>
                         </p>
-                        <h3 class="destinations-details__subtitle">Nos Produits</h3><!-- /.destinations-details__title -->
+                        <h3 class="destinations-details__subtitle">{% trans %}Nos Produits{% endtrans %}</h3><!-- /.destinations-details__title -->
                         <p><ul>
                             <li>
                                 <div align="left">
-                                    Trekking et randonn&eacute;es p&eacute;destres (Montagnes&nbsp;et d&eacute;sert:portage &agrave; dos de mules ou dromadaires)</div>
+                                    {% trans %}Trekking and hiking (Mountains and desert: portage on mules or dromedaries){% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Grande &eacute;vasion du d&eacute;sert avec des &nbsp;Jeep 4x4</div>
+                                    {% trans %} Great Desert Escape with 4x4 Jeeps{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Raids en VTT</div>
+                                    {% trans %}Mountain bike raids{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Ski de randonn&eacute;e</div>
+                                    {% trans %}Nordic skiing{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Raid en Quad</div>
+                                    {% trans %}Quad Raid{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Randonn&eacute;e chameli&egrave;re le long de l&acute;Atlantique</div>
+                                    {% trans %}Camel trek along the Atlantic{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    voyages culturels en Bus ou Jeep</div>
+                                    {% trans %}cultural trips by Bus or Jeep{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Des rencontres avec des familles Berb&egrave;res</div>
+                                    {% trans %}Meetings with Berber families{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Des voyages &agrave; la carte ou &agrave; th&egrave;me</div>
+                                    {% trans %}Tailor-made or themed trips{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Des bivouacs de luxe en plein d&eacute;sert</div>
+                                    {% trans %}Luxury bivouacs in the middle of the desert{% endtrans %}</div>
                             </li>
                             <li>
                                 <div align="left">
-                                    Thalasso&nbsp;&nbsp;</div>
+                                    {% trans %}Thalasso{% endtrans %}</div>
                             </li>
                         </ul></p>
                         <br>
-                        <h3 class="destinations-details__subtitle">Esprit Ribat tours</h3><!-- /.destinations-details__title -->
-                        <p>Nous voulons avec un cœur ouvert et plein de joie, vous faire rapprocher  d´une  culture d´une population isolée et de partager avec eux leur plaisir de vie et de vous laisser goûter le charme du silence de la nature, qu´ils vivent en gardant une vie traditionnelle  et voulant vivre loin de toute civilisation en s´attachant aux traditions du pays.</p>
-
+                        <h3 class="destinations-details__subtitle">{% trans %}Esprit Ribat tours{% endtrans %}</h3><!-- /.destinations-details__title -->
+                        <p>{% trans %}We want with an open heart and full of joy, to bring you closer to a culture of an isolated population and to share with them their pleasure of life and to let you taste the charm of the silence of nature, which they live in. keeping a traditional life and wanting to live far from any civilization by sticking to the traditions of the country. {% endtrans %}</p>
                         <br>
-                        <h3 class="destinations-details__subtitle">Notre but :</h3><!-- /.destinations-details__title -->
-                        <p>Nous voulons avec un cœur ouvert et plein de joie, vous faire rapprocher  d´une  culture d´une population isolée et de partager avec eux leur plaisir de vie et de vous laisser goûter le charme du silence de la nature, qu´ils vivent en gardant une vie traditionnelle  et voulant vivre loin de toute civilisation en s´attachant aux traditions du pays.</p>
-                    </div></div></div></div>
+                        <h3 class="destinations-details__subtitle">{% trans %}Notre but{% endtrans %}</h3><!-- /.destinations-details__title -->
+                        <p> {% trans %}We want with an open heart and full of joy, to bring you closer to a culture of an isolated population and to share with them their pleasure of life and to let you taste the charm of the silence of nature, that they live by keeping a traditional life and wanting to live far from any civilization by sticking to the traditions of the country.{% endtrans %} </p>                    </div></div></div></div>
                     </div><!-- /.destinations-details__content -->
                 </div><!-- /.col-lg-8 -->
             </div><!-- /.row -->
