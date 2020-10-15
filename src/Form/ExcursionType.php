@@ -15,12 +15,18 @@ class ExcursionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom')
-            ->add('ville')
+            ->add('nom',TextareaType::class,['label'=>'Francais'])
+            ->add('nomes',TextareaType::class,['label'=>'Espagnol'])
+            ->add('nomen',TextareaType::class,['label'=>'Englais'])
+            ->add('ville',TextareaType::class,['label'=>'Francais'])
+            ->add('villees',TextareaType::class,['label'=>'Espagnol'])
+            ->add('villeen',TextareaType::class,['label'=>'Englais'])
             ->add('prixadulte',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('prixenfant',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('imagesFile',FileType::class,['required'=>false])
-            ->add('presentation',TextareaType::class)
+            ->add('presentation',TextareaType::class,['label'=>'Francais'])
+            ->add('presentationes',TextareaType::class,['label'=>'Espagnol'])
+            ->add('presentationen',TextareaType::class,['label'=>'Englais'])
         ;
     }
 

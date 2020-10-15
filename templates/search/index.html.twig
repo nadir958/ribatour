@@ -5,7 +5,7 @@
 
    <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
       <div class="container" style="text-align: center">
-         <h2 style="text-align: center">{% trans %}chose <span>your tour{% endtrans %}</span></h2>
+         <h2 style="text-align: center">{% trans %}choose <span>your tour{% endtrans %}</span></h2>
          <p style="text-align: center">{% trans %}Where would you like to go?{% endtrans %}</p>
          {{ form_start(searchForm) }}
          <form class="tour-search-one" >
@@ -53,8 +53,8 @@
                            {{excursion.ville}}
                         </div><!-- /.tour-one__ville -->
                         <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
-                        <p><span>{{excursion.prixadulte}}$</span> / {% trans %}Adulte price{% transend %}
-                           <span class="ma">{{excursion.prixenfant}}$</span> / {% trans %}Child price{% transend %}</p>
+                        <p><span>{{excursion.prixadulte}}$</span> / {% trans %}Adulte price{% endtrans %}
+                           <span class="ma">{{excursion.prixenfant}}$</span> / {% trans %}Child price{% endtrans %}</p>
                      </div><!-- /.tour-one__content -->
                   </div><!-- /.tour-one__single -->
                </div><!-- /.col-lg-4 -->

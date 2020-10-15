@@ -1,0 +1,23 @@
+properties:
+  nom:
+    label: 'Nom'
+  prenom:
+    label: 'Prenom'
+  Tel:
+    label: 'Tel'
+  email:
+    label: 'E-mail'
+  nombreAdulte:
+    label: 'Nombre Adulte'
+  NombreEnfant:
+    label: 'Nombre Enfant'
+  DateDebut:
+    label: 'Date Debut'
+  DateFin:
+    label: 'Date Fin'
+  message:
+    label: 'Message'
+  envoyer:
+    label: 'Envoyer'
+  ville:
+    label: 'ville'

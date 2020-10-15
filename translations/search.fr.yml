@@ -1,0 +1,7 @@
+properties:
+  nom:
+    label: 'Nom'
+  ville:
+    label: 'Ville'
+  chercher:
+    label: 'Chercher'

@@ -61,6 +61,36 @@ class Excursion
      */
     private $ville;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nomen;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $presentationen;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $villeen;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nomes;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $presentationes;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $villees;
+
 
     public function getId(): ?int
     {
@@ -159,6 +189,78 @@ class Excursion
     public function setVille(string $ville): self
     {
         $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getNomen(): ?string
+    {
+        return $this->nomen;
+    }
+
+    public function setNomen(string $nomen): self
+    {
+        $this->nomen = $nomen;
+
+        return $this;
+    }
+
+    public function getPresentationen(): ?string
+    {
+        return $this->presentationen;
+    }
+
+    public function setPresentationen(string $presentationen): self
+    {
+        $this->presentationen = $presentationen;
+
+        return $this;
+    }
+
+    public function getVilleen(): ?string
+    {
+        return $this->villeen;
+    }
+
+    public function setVilleen(string $villeen): self
+    {
+        $this->villeen = $villeen;
+
+        return $this;
+    }
+
+    public function getNomes(): ?string
+    {
+        return $this->nomes;
+    }
+
+    public function setNomes(string $nomes): self
+    {
+        $this->nomes = $nomes;
+
+        return $this;
+    }
+
+    public function getPresentationes(): ?string
+    {
+        return $this->presentationes;
+    }
+
+    public function setPresentationes(string $presentationes): self
+    {
+        $this->presentationes = $presentationes;
+
+        return $this;
+    }
+
+    public function getVillees(): ?string
+    {
+        return $this->villees;
+    }
+
+    public function setVillees(string $villees): self
+    {
+        $this->villees = $villees;
 
         return $this;
     }
