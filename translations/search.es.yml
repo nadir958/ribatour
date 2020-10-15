@@ -1,0 +1,7 @@
+properties:
+  nom:
+    label: 'Apellido'
+  ville:
+    label: 'Ciudad'
+  chercher:
+    label: 'Buscar'

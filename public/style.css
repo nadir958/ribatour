@@ -2,7 +2,6 @@
     margin-left: 20px;
 }
 
-
 @media only screen and (min-width: 768px) {
     .tour-search-one__inner{
         padding-right: 40px;
@@ -16,4 +15,9 @@
     .site-footer{
         text-align: center;
     }
+}
+
+h3.titre{
+    color: #0D233E;
+    text-align: center;
 }

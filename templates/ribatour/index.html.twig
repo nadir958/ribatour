@@ -66,11 +66,26 @@
                             </div><!-- /.tour-one__image -->
                             <div class="tour-one__content">
                                 <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
-                                    {{excursion.ville}}
+                                    {% if (app.request.getlocale()) == 'es' %}
+                                        {{excursion.villees}}
+                                    {% elseif (app.request.getlocale()) == 'en' %}
+                                        {{excursion.villeen}}
+                                    {% elseif (app.request.getlocale()) == 'fr' %}
+                                        {{excursion.ville}}
+                                    {% endif %}
                                 </div><!-- /.tour-one__ville -->
-                                <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">{{excursion.nom}}</a></h3>
-                                <p><span>{{excursion.prixadulte}}$</span> / Adult price
-                                <span class="ma">{{excursion.prixenfant}}$</span> / Child price</p>
+                                <h3><a href="{{path('excursion_show',{'id': excursion.id})}}">
+                                        {% if (app.request.getlocale()) == 'es' %}
+                                            {{excursion.nomes}}
+                                        {% elseif (app.request.getlocale()) == 'en' %}
+                                            {{excursion.nomen}}
+                                        {% elseif (app.request.getlocale()) == 'fr' %}
+                                            {{excursion.nom}}
+                                        {% endif %}
+                                    </a>
+                                </h3>
+                                <p><span>{{excursion.prixadulte}}$</span> / {% trans %}Adult price{% endtrans %}
+                                <span class="ma">{{excursion.prixenfant}}$</span> / {% trans %}Child price{% endtrans %}</p>
                             </div><!-- /.tour-one__content -->
                         </div><!-- /.tour-one__single -->
                     </div><!-- /.col-lg-4 -->

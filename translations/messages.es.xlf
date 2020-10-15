@@ -233,6 +233,30 @@
         <source>Contact us on social networks</source>
         <target>Contáctanos en las redes sociales</target>
       </trans-unit>
+      <trans-unit id="xPb4f34" resname="TOURS">
+        <source>TOURS</source>
+        <target>EXCURSIONES</target>
+      </trans-unit>
+      <trans-unit id="VrPiIzy" resname="choose &lt;span&gt;your tour">
+        <source>choose &lt;span&gt;your tour</source>
+        <target><![CDATA[elige <span> tu recorrido]]></target>
+      </trans-unit>
+      <trans-unit id="MV0pniC" resname="Result liste">
+        <source>Result liste</source>
+        <target>Lista de resultados</target>
+      </trans-unit>
+      <trans-unit id="e4JujQ." resname="Adulte price">
+        <source>Adulte price</source>
+        <target>Precio adulto</target>
+      </trans-unit>
+      <trans-unit id="asdyq33" resname="Child price">
+        <source>Child price</source>
+        <target>Precio infantil</target>
+      </trans-unit>
+      <trans-unit id="P.KfobY" resname="Adult price">
+        <source>Adult price</source>
+        <target>Precio adulto</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

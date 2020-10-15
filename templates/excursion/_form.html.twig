@@ -7,13 +7,27 @@
             <div>{{ form_row(form.imagesFile) }}</div>
         </div>
         <div class="col-6">
-            <div>{{ form_row(form.nom)}}</div>
-            <div>{{ form_row(form.ville)}}</div>
+            <h3 class="titre">Prix :</h3>
             <div>{{ form_row(form.prixadulte,{"label":" Prix Adulte ($)" }) }}</div>
             <div>{{ form_row(form.prixenfant,{ "label":" Prix Enfant ($)" }) }}</div>
         </div>
+        <div class="col-6">
+            <h3 class="titre">Nom :</h3>
+            <div>{{ form_row(form.nom)}}</div>
+            <div>{{ form_row(form.nomes)}}</div>
+            <div>{{ form_row(form.nomen)}}</div>
+        </div>
+        <div class="col-6">
+            <h3 class="titre">Ville :</h3>
+            {{ form_row(form.ville) }}
+            {{ form_row(form.villees) }}
+            {{ form_row(form.villeen) }}
+        </div>
         <div class="col-12">
+            <h3 class="titre">Presentation :</h3>
             {{ form_row(form.presentation) }}
+            {{ form_row(form.presentationes) }}
+            {{ form_row(form.presentationen) }}
         </div>
     </div>
     {{ form_widget(form) }}

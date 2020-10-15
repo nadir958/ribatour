@@ -1,0 +1,23 @@
+properties:
+  nom:
+    label: 'Apellido'
+  prenom:
+    label: 'Nombre de pila'
+  Tel:
+    label: 'Teléfono'
+  email:
+    label: 'Correo electrónico'
+  nombreAdulte:
+    label: 'Número Adulto'
+  NombreEnfant:
+    label: 'Número Niño'
+  DateDebut:
+    label: 'Fecha de inicio'
+  DateFin:
+    label: 'Fecha final'
+  message:
+    label: 'Mensaje'
+  envoyer:
+    label: 'Enviar'
+  ville:
+    label: 'Ciudad'

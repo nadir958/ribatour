@@ -5,7 +5,13 @@
 {% block body %}
     <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <h2>{{ excursion.nom }}</h2>
+            {% if (app.request.getlocale()) == 'es' %}
+                <h2>{{ excursion.nomes }}</h2>
+            {% elseif (app.request.getlocale()) == 'en' %}
+                <h2>{{ excursion.nomen }}</h2>
+            {% elseif (app.request.getlocale()) == 'fr' %}
+                <h2>{{ excursion.nom }}</h2>
+            {% endif %}
         </div><!-- /.container -->
     </section><!-- /.page-header -->
 
@@ -16,11 +22,26 @@
                 <div class="tour-details__content">
                     <div class="tour-two__top">
                         <div class="tour-two__top-left">
-                            <h3>{{ excursion.nom }}</h3>
-                            <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
-                                {{excursion.ville}}
-                            </div><!-- /.tour-one__ville -->
 
+                                {% if (app.request.getlocale()) == 'es' %}
+                                    <h3>{{ excursion.nomes }}</h3>
+                                {% elseif (app.request.getlocale()) == 'en' %}
+                                    <h3>{{ excursion.nomen }}</h3>
+                                {% elseif (app.request.getlocale()) == 'fr' %}
+                                    <h3>{{ excursion.nom }}</h3>
+                                {% endif %}
+
+                            <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
+
+                                {% if (app.request.getlocale()) == 'es' %}
+                                    {{excursion.villees}}
+                                {% elseif (app.request.getlocale()) == 'en' %}
+                                    {{excursion.villeen}}
+                                {% elseif (app.request.getlocale()) == 'fr' %}
+                                    {{excursion.ville}}
+                                {% endif %}
+
+                            </div><!-- /.tour-one__ville -->
                         </div><!-- /.tour-two__top-left -->
                         <div class="tour-two__right">
                             <p><span>{{ excursion.prixadulte }}$</span> <br> {% trans %}Adulte Price{% endtrans %}</p>
@@ -40,7 +61,13 @@
                             </div><!-- /.swiper-slide -->
                     </div><!-- /.tour-details__gallery-carousel -->
                         <br/><h3 class="tour-details__title">{% trans %}Presentation{% endtrans %}</h3><!-- /.tour-details__title -->
-                    <p>{{ excursion.presentation }}</p>
+                        {% if (app.request.getlocale()) == 'es' %}
+                            <p>{{ excursion.presentationes }}</p>
+                        {% elseif (app.request.getlocale()) == 'en' %}
+                            <p>{{ excursion.presentationen }}</p>
+                        {% elseif (app.request.getlocale()) == 'fr' %}
+                            <p>{{ excursion.presentation }}</p>
+                        {% endif %}
                     <!-- /.tour-details__subtitle -->
                     </div>
                 </div>

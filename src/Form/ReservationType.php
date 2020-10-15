@@ -19,26 +19,26 @@ class ReservationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom',texttype::class,['translation_domain' => 'messages'])
-            ->add('prenom',texttype::class,['translation_domain' => 'messages'])
-            ->add('Tel')
-            ->add('email',EmailType::class,['translation_domain' => 'messages'])
-            ->add('nombreAdulte',NumberType::class,['translation_domain' => 'messages'])
-            ->add('NombreEnfant',NumberType::class,['translation_domain' => 'messages'])
-            ->add('DateDebut', DateType::class, ['translation_domain' => 'messages',
+            ->add('nom',texttype::class,['translation_domain' => 'properties','label' => 'properties.nom.label'])
+            ->add('prenom',texttype::class,['translation_domain' => 'properties','label' => 'properties.prenom.label'])
+            ->add('Tel',texttype::class,['translation_domain' => 'properties','label' => 'properties.Tel.label'])
+            ->add('email',EmailType::class,['translation_domain' => 'properties','label' => 'properties.email.label'])
+            ->add('nombreAdulte',NumberType::class,['translation_domain' => 'properties','label' => 'properties.nombreAdulte.label'])
+            ->add('NombreEnfant',NumberType::class,['translation_domain' => 'properties','label' => 'properties.NombreEnfant.label'])
+            ->add('DateDebut', DateType::class, ['translation_domain' => 'properties','label' => 'properties.DateDebut.label',
                 'widget' => 'single_text', 'html5' => false, 'format' => 'dd/MM/yyyy','invalid_message' => 'entrer une date',
                 'placeholder' => [
                     'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
                 ],'constraints'=>[new GreaterThanOrEqual("today"),],'data' => new \DateTime(),
             ])
             ->add('DateFin', DateType::class,
-                ['translation_domain' => 'messages','widget' => 'single_text','html5' => false,  'format' => 'dd/MM/yyyy',
+                ['translation_domain' => 'properties','label' => 'properties.DateFin.label','widget' => 'single_text','html5' => false,  'format' => 'dd/MM/yyyy',
                 'placeholder' => ['year' => 'Année', 'month' => 'Mois', 'day' => 'Jour', ],'constraints'=>[new GreaterThanOrEqual(['propertyPath' => 'parent.all[DateDebut].data']),]
                     ,'data' => new \DateTime(),
                 ]
             )
-            ->add('message',TextareaType::class,['translation_domain' => 'messages'])
-            ->add('envoyer',SubmitType::class,['translation_domain' => 'messages'])
+            ->add('message',TextareaType::class,['translation_domain' => 'properties','label' => 'properties.message.label'])
+            ->add('envoyer',SubmitType::class,['translation_domain' => 'properties','label' => 'properties.envoyer.label'])
         ;
     }
 

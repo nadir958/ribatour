@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="X99vVh2" resname="properties.nom.label">
+        <source>properties.nom.label</source>
+        <target>Apellido</target>
+      </trans-unit>
+      <trans-unit id="9hZ84WE" resname="properties.prenom.label">
+        <source>properties.prenom.label</source>
+        <target>Nombre de pila</target>
+      </trans-unit>
+      <trans-unit id="RKpoZTd" resname="properties.Tel.label">
+        <source>properties.Tel.label</source>
+        <target>Teléfono</target>
+      </trans-unit>
+      <trans-unit id="M8uAD4K" resname="properties.email.label">
+        <source>properties.email.label</source>
+        <target>Correo electrónico</target>
+      </trans-unit>
+      <trans-unit id="bEfh5Br" resname="properties.nombreAdulte.label">
+        <source>properties.nombreAdulte.label</source>
+        <target>Número Adulto</target>
+      </trans-unit>
+      <trans-unit id="ZBXR_jg" resname="properties.NombreEnfant.label">
+        <source>properties.NombreEnfant.label</source>
+        <target>Número Niño</target>
+      </trans-unit>
+      <trans-unit id="56j5ad1" resname="properties.DateDebut.label">
+        <source>properties.DateDebut.label</source>
+        <target>Fecha de inicio</target>
+      </trans-unit>
+      <trans-unit id="H6Mj2Bm" resname="properties.DateFin.label">
+        <source>properties.DateFin.label</source>
+        <target>Fecha final</target>
+      </trans-unit>
+      <trans-unit id="5aaJnax" resname="properties.message.label">
+        <source>properties.message.label</source>
+        <target>Mensaje</target>
+      </trans-unit>
+      <trans-unit id="ZO5m92b" resname="properties.envoyer.label">
+        <source>properties.envoyer.label</source>
+        <target>Enviar</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
