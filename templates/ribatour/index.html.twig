@@ -3,11 +3,11 @@
 {% block body %}
     <section class="banner-one" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
         <div class="container">
-            <div class="hometitle">
+            <div class="hometitle" style="text-align: center">
                 <h2>{% trans %}Visit <span>Morocco{% endtrans %}</span></h2>
-                <p>{% trans %}Where would you like to go?{% endtrans %}</p>
+                <p style="margin-buttom: 0px;">{% trans %}Where would you like to go?{% endtrans %}</p>
                 <div class="col text-center">
-                    <a class="thm-btn tour-search-one__btn" style="text-align: center" href="{{path('search')}}">{% trans %}Search{% endtrans %}</a>
+                    <a class="thm-btn tour-search-one__btn" style="padding-top: 10px;padding-bottom:10px;text-align: center" href="{{path('search')}}">{% trans %}Search{% endtrans %}</a>
                 </div><!-- /.tour-search-one__btn-wrap -->
             </div>
         </div><!-- /.container -->

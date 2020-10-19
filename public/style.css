@@ -21,3 +21,8 @@ h3.titre{
     color: #0D233E;
     text-align: center;
 }
+.body{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+}

@@ -3,7 +3,7 @@
         <div class="topbar-one">
             <div class="container-fluid">
                 <div class="topbar-one__left">
-                    <a href="mailto:contact@ribatour.com">contact@ribatour.com</a>
+                    <a href="mailto:contact@ribatour.com">contact@ribatours.com</a>
                     <a href="tel:+212 245 111 000">+212 245 111 000</a>
                     <a href="#">Rue Outman Appt 10 N 586
                         40000, MARRAKECH - MOROCCO</a>
@@ -73,12 +73,19 @@
             </div><!-- /.side-menu__top -->
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
-            </nav>
+            </nav><br>
+            <div class="text-center">
+                {% for locale in locales %}
+                    {% if locale != app.request.locale %}
+                        <a href="{{ path('change_locale',{'locale':locale}) }}" class="topbar-one__guide-btn text-align-center">{{locale}}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
             <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
             <div class="side-menu__content">
                 <p>{% trans %}Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.
                         Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.{% endtrans %}</p>
-                <p><a href="mailto:contact@ribatour.com">contact@ribatour.com</a> <br> <a href="tel:+212 245 111 000">+212 245 111 000</a></p>
+                <p><a href="mailto:contact@ribatour.com">contact@ribatours.com</a> <br> <a href="tel:+212 245 111 000">+212 245 111 000</a></p>
                 <div class="side-menu__social">
                     <a href="#"><i class="fab fa-facebook-square"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
