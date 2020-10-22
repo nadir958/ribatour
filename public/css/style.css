@@ -1795,6 +1795,7 @@ h6 {
 	-webkit-box-pack: center;
 	justify-content: center;
 	align-content: space-between;
+	display: block;
 }
 
 @media(max-width: 575px) {

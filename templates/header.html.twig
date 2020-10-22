@@ -29,7 +29,7 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="main-nav__logo-box">
                         <a href="{{ path('ribatour') }}" class="main-nav__logo">
-                            <img src="{{asset('images/travelagency-logo.png')}}"  width="123" class="main-logo" alt="Ribators logo" />
+                            <img src="{{asset('images/travelagency-logo.png')}}"  width="150" class="main-logo" alt="Ribators logo" />
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i>
                             <!-- /.smpl-icon-menu --></a>
@@ -71,16 +71,16 @@
                 <a href="#" class="side-menu__toggler side-menu__close-btn"><img
                             src="{{asset('images/close-1-1.png')}}" alt=""></a>
             </div><!-- /.side-menu__top -->
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
-            </nav><br>
             <div class="text-center">
                 {% for locale in locales %}
                     {% if locale != app.request.locale %}
-                        <a href="{{ path('change_locale',{'locale':locale}) }}" class="topbar-one__guide-btn text-align-center">{{locale}}</a>
+                        <a href="{{ path('change_locale',{'locale':locale}) }}" class="topbar-one__guide-btn text-align-center" style="padding: 10px">{{locale}}</a>
                     {% endif %}
                 {% endfor %}
             </div>
+            <nav class="mobile-nav__container">
+                <!-- content is loading via js -->
+            </nav>
             <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
             <div class="side-menu__content">
                 <p>{% trans %}Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.

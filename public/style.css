@@ -15,6 +15,13 @@
     .site-footer{
         text-align: center;
     }
+    .tour-details__content{
+        text-align: center;
+    }
+    .tour-two__right{
+        margin: 10px;
+    }
+
 }
 
 h3.titre{
@@ -26,3 +33,4 @@ h3.titre{
     padding: 10px;
     box-shadow: 5px 10px 18px #888888;
 }
+
