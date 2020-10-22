@@ -1,6 +1,6 @@
 {% block footer %}
 
-    <footer class="site-footer">
+    <footer class="site-footer" style="padding-top: 40px;padding-bottom: 10px">
         <!-- /.site-footer__bg -->
         <div class="container">
             <div class="row">
@@ -15,17 +15,17 @@
                 <div class="footer-widget__column footer-widget__links">
                     <h3 class="footer-widget__title">{% trans %}company{% endtrans %}</h3><!-- /.footer-widget__title -->
                     <ul class="footer-widget__links-list list-unstyled">
-                        <li><a href="about.html">{% trans %}About Us{% endtrans %}</a></li>
-                        <li><a href="news.html">{% trans %}Conditions of sale{% endtrans %}</a></li>
-                        <li><a href="about.html">{% trans %}Contact us{% endtrans %}</a></li>
+                        <li><a href="{{ path('about') }}">{% trans %}About Us{% endtrans %}</a></li>
+                        <li><a href="#">{% trans %}Conditions of sale{% endtrans %}</a></li>
+                        <li><a href="{{ path('contact') }}">{% trans %}Contact us{% endtrans %}</a></li>
                     </ul><!-- /.footer-widget__links-list list-unstyled -->
                 </div><!-- /.footer-widget__column -->
                 <div class="footer-widget__column footer-widget__links">
                     <h3 class="footer-widget__title">{% trans %}Links{% endtrans %}</h3><!-- /.footer-widget__title -->
                     <ul class="footer-widget__links-list list-unstyled">
-                        <li><a href="tour-sidebar.html">{% trans %}Excursions{% endtrans %}</a></li>
-                        <li><a href="contact.html">{% trans %}Contact{% endtrans %}</a></li>
-                        <li><a href="faq.html">{% trans %}Conditions of sale{% endtrans %}</a></li>
+                        <li><a href="{{ path('excursions') }}">{% trans %}Excursions{% endtrans %}</a></li>
+                        <li><a href="{{ path('contact') }}">{% trans %}Contact{% endtrans %}</a></li>
+                        <li><a href="#">{% trans %}Conditions of sale{% endtrans %}</a></li>
                     </ul><!-- /.footer-widget__links-list list-unstyled -->
                 </div><!-- /.footer-widget__column -->
                 <div class="footer-widget__column footer-widget__links">
@@ -40,7 +40,7 @@
 
     <div class="site-footer__bottom">
         <div class="container">
-            <p>@ All copyright 2020, <a href="{{ path('ribatour') }}">ribatour.com</a></p>
+            <p>@ All copyright 2020, <a href="{{ path('ribatour') }}">ribatours.com</a></p>
             <div class="site-footer__social">
                 <a href="#"><i class="fab fa-facebook-square"></i><!-- /.fab fa-facebook-square --></a>
                 <a href="#"><i class="fab fa-twitter"></i><!-- /.fab fa-twitter --></a>

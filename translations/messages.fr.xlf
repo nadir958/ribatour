@@ -61,9 +61,9 @@
         <source>Who are we ?</source>
         <target>Qui sommes nous ?</target>
       </trans-unit>
-      <trans-unit id="xt7yOCp" resname="Transport Agency">
-        <source>Transport Agency</source>
-        <target>Agence de transport</target>
+      <trans-unit id="xt7yOCp" resname="travel agency">
+        <source>travel agency</source>
+        <target>agence de voyage</target>
       </trans-unit>
       <trans-unit id="lKvnlk1" resname="Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.">
         <source>Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.</source>
@@ -155,7 +155,7 @@
       </trans-unit>
       <trans-unit id="JuxSI1z" resname="Adulte Price">
         <source>Adulte Price</source>
-        <target>Prix edulte</target>
+        <target>Prix adulte</target>
       </trans-unit>
       <trans-unit id="D20cT9K" resname="Child Price">
         <source>Child Price</source>

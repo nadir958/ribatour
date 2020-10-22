@@ -572,7 +572,7 @@
 		-webkit-box-pack: start;
 		        justify-content: flex-start;
 		-webkit-box-align: start;
-		        align-items: flex-start;
+		    /*   align-items: flex-start; */
 	}
 	.tour-two__top h3 {
 		margin-bottom: 20px;

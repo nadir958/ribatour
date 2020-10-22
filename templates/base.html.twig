@@ -40,7 +40,9 @@
     <body>
         {% include 'header.html.twig' %}
 
-        {% block body %}{% endblock %}
+        {% block body %}
+
+        {% endblock %}
 
         {% block javascripts %}
 
@@ -61,7 +63,6 @@
             <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
             <script src="{{ asset('js/nouislider.min.js') }}"></script>
             <script src="{{ asset('js/isotope.js') }}"></script>
-            <script src="{{ asset('js/topbar.js') }}"></script>
             <script src="{{ asset('js/theme.js') }}"></script>
 
 

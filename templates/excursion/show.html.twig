@@ -15,22 +15,13 @@
         </div><!-- /.container -->
     </section><!-- /.page-header -->
 
-<section class="tour-two tour-list">
+<section class="tour-two tour-list" style="padding-top: 40px">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8" style="padding-top: -20px">
                 <div class="tour-details__content">
                     <div class="tour-two__top">
-                        <div class="tour-two__top-left">
-
-                                {% if (app.request.getlocale()) == 'es' %}
-                                    <h3>{{ excursion.nomes }}</h3>
-                                {% elseif (app.request.getlocale()) == 'en' %}
-                                    <h3>{{ excursion.nomen }}</h3>
-                                {% elseif (app.request.getlocale()) == 'fr' %}
-                                    <h3>{{ excursion.nom }}</h3>
-                                {% endif %}
-
+                        <div class= "tour-two__top-left">
                             <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
 
                                 {% if (app.request.getlocale()) == 'es' %}
@@ -43,12 +34,12 @@
 
                             </div><!-- /.tour-one__ville -->
                         </div><!-- /.tour-two__top-left -->
-                        <div class="tour-two__right">
-                            <p><span>{{ excursion.prixadulte }}$</span> <br> {% trans %}Adulte Price{% endtrans %}</p>
-                        </div><!-- /.tour-two__right -->
-                        <div class="tour-two__right">
-                            <p><span>{{ excursion.prixenfant }}$</span> <br> {% trans %}Child Price{% endtrans %}</p>
-                        </div><!-- /.tour-two__right -->
+                            <div class="tour-two__right">
+                                <p><span>{{ excursion.prixadulte }}$</span> <br> {% trans %}Adulte Price{% endtrans %}</p>
+                            </div><!-- /.tour-two__right -->
+                            <div class="tour-two__right">
+                                <p><span>{{ excursion.prixenfant }}$</span> <br> {% trans %}Child Price{% endtrans %}</p>
+                            </div><!-- /.tour-two__right -->
                     </div><!-- /.tour-two__top -->
                     <ul class="tour-one__meta list-unstyled"> </ul><!-- /.tour-one__meta -->
 
@@ -113,14 +104,30 @@
                 weekStart: 1,
                 format: "dd/mm/yyyy"
             };
+            $.fn.datepicker.dates['es'] = {
+                days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+                daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
+                daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"],
+                months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+                today: "Hoy",
+                monthsTitle: "Mes",
+                weekStart: 1,
+                format: "dd/mm/yyyy"
+            };
         }(jQuery));
 
         $('.js-datepicker').datepicker({
             autoclose: true,
-            language: 'fr',
             dateFormat : 'dd/mm/yy',
             format:'dd/mm/yyyy',
-
+            {% if (app.request.getlocale()) == 'es' %}
+            language: 'es',
+            {% elseif (app.request.getlocale()) == 'en' %}
+            language: 'en',
+            {% elseif (app.request.getlocale()) == 'fr' %}
+            language: 'fr',
+            {% endif %}
         }).datepicker("setDate", 'now');
 
     </script>

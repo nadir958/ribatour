@@ -61,9 +61,9 @@
         <source>Who are we ?</source>
         <target>Quienes somos ?</target>
       </trans-unit>
-      <trans-unit id="xt7yOCp" resname="Transport Agency">
-        <source>Transport Agency</source>
-        <target>Agencia de transporte</target>
+      <trans-unit id="xt7yOCp" resname="travel agency">
+        <source>travel agency</source>
+        <target>Agencia de Viajes</target>
       </trans-unit>
       <trans-unit id="lKvnlk1" resname="Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.">
         <source>Ribat Tours is a travel and tourism agency, created in March 1983 and approved by the Ministry of Tourism in Morocco.</source>
