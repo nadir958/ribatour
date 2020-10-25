@@ -20,8 +20,8 @@
                             <div class="col-xl-4 col-lg-6">
                                 <div class="tour-one__single">
                                     <div class="tour-one__image">
-                                        <img src="{{ asset('photos/excursions/'~excursion.images) }}" alt="">
-                                        <a href="tour-details.html"><i class="fa fa-heart"></i></a>
+                                        <img src="{{ asset('photos/excursions/'~excursion.images) }}" alt="" style="width: 380px;height: 240px">
+                                        <a href="{{path('excursion_show',{'id': excursion.id})}}"><i class="fa fa-heart"></i></a>
                                     </div><!-- /.tour-one__image -->
                                     <div class="tour-one__content">
                                         <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
@@ -49,6 +49,9 @@
                                 </div><!-- /.tour-one__single -->
                             </div><!-- /.col-lg-4 -->
                         {% endfor %}
+                    </div>
+                    <div class="post-pagination">
+                        {{ knp_pagination_render(excursions) }}
                     </div>
                 </div>
             </div>

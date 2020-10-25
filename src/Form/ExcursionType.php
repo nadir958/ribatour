@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Excursion;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -27,6 +28,10 @@ class ExcursionType extends AbstractType
             ->add('presentation',TextareaType::class,['label'=>'Francais'])
             ->add('presentationes',TextareaType::class,['label'=>'Espagnol'])
             ->add('presentationen',TextareaType::class,['label'=>'Englais'])
+            ->add('envedette',CheckboxType::class, [
+                'label'    => 'afficher en vedette ?',
+                'required' => false,
+            ])
         ;
     }
 
