@@ -91,6 +91,11 @@ class Excursion
      */
     private $villees;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $envedette;
+
 
     public function getId(): ?int
     {
@@ -261,6 +266,18 @@ class Excursion
     public function setVillees(string $villees): self
     {
         $this->villees = $villees;
+
+        return $this;
+    }
+
+    public function getEnvedette(): ?bool
+    {
+        return $this->envedette;
+    }
+
+    public function setEnvedette(bool $envedette): self
+    {
+        $this->envedette = $envedette;
 
         return $this;
     }

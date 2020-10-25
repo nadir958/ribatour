@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Repository\ExcursionRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class RibatourController extends AbstractController
@@ -21,19 +23,18 @@ class RibatourController extends AbstractController
     /**
      * @Route("/excursions", name="excursions")
      */
-    public function excursions(ExcursionRepository $repository)
+    public function excursions(ExcursionRepository $repository,Request $request, PaginatorInterface $paginator)
     {
-        $excursions = $repository->findAll();
+        // Méthode findBy qui permet de récupérer les données
+        $donnees = $repository->findAll();
+        $excursions = $paginator->paginate(
+            $donnees, // Requête contenant les données à paginer (ici nos articles)
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            6 // Nombre de résultats par page
+        );
         return $this->render('ribatour\excursions.html.twig',[
             'excursions'=>$excursions,
         ]);
-    }
-    /**
-     * @Route("/transferts", name="transferts")
-     */
-    public function transferts()
-    {
-        return $this->render('ribatour\transferts.html.twig');
     }
     /**
      * @Route("/about", name="about")

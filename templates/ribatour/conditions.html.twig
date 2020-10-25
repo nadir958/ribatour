@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title  %} contact {% endblock %}
+{% block body %}
+    <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
+        <div class="container">
+            <h2>{% trans %}Conditions of sales{% endtrans%}</h2>
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
+
+    <section class="tour-two tour-list destinations-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="destinations-details__content">
+                        <h3 class="destinations-details__title">{% trans %}Conditions{% endtrans %}</h3><!-- /.destinations-details__title -->
+                    </div><!-- /.destinations-details__content -->
+                </div><!-- /.col-lg-8 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.tour-two -->
+
+
+{% endblock %}

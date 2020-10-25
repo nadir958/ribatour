@@ -228,6 +228,25 @@ h6 {
 	-webkit-transition: all .4s ease;
 	transition: all .4s ease;
 }
+.post-pagination span {
+	border-radius: 50%;
+	background-color: var(--thm-gray);
+	color: #9ca3a9;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	padding: 0;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	width: 57px;
+	height: 57px;
+	-webkit-transition: all .4s ease;
+	transition: all .4s ease;
+}
 
 .post-pagination a:hover {
 	background-color: var(--thm-primary);
@@ -235,6 +254,11 @@ h6 {
 }
 
 .post-pagination a.active {
+	background-color: var(--thm-base);
+	color: #fff;
+	cursor: auto;
+}
+.post-pagination span.current {
 	background-color: var(--thm-base);
 	color: #fff;
 	cursor: auto;

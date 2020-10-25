@@ -67,7 +67,7 @@ class ExcursionController extends AbstractController
                 //expediteur
                 ->SetFrom($reservation['email'])
                 //destinataire
-                ->SetTo('layoune95@gmail.com')
+                ->SetTo('info@ribatours.com')
                 //view
                 ->setBody(
                     $this->renderView(
