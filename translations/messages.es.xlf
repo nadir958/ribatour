@@ -61,7 +61,7 @@
         <source>Who are we ?</source>
         <target>Quienes somos ?</target>
       </trans-unit>
-      <trans-unit id="xt7yOCp" resname="travel agency">
+      <trans-unit id="e8XucZt" resname="travel agency">
         <source>travel agency</source>
         <target>Agencia de Viajes</target>
       </trans-unit>
@@ -73,15 +73,15 @@
         <source>Ribat Tours specializes in cultural and sporting trips, trekking of all kinds, stays, à la carte trips and also your own proposal.</source>
         <target>Ribat Tours se especializa en viajes culturales y deportivos, trekking de todo tipo, estancias, viajes a la carta y también tu propia propuesta.</target>
       </trans-unit>
-      <trans-unit id="IvqidwL" resname="Our products">
+      <trans-unit id="qF9Xz4F" resname="Our products">
         <source>Our products</source>
         <target>Nuestros productoss</target>
       </trans-unit>
-      <trans-unit id="5gCZe_U" resname="Ribat tours Mind">
+      <trans-unit id="R7R9eFR" resname="Ribat tours Mind">
         <source>Ribat tours Mind</source>
         <target>Visitas al Spirit Ribat</target>
       </trans-unit>
-      <trans-unit id="3E1qFKb" resname="Our Goal">
+      <trans-unit id="1stEOAf" resname="Our Goal">
         <source>Our Goal</source>
         <target>Nuestro objetivo</target>
       </trans-unit>
@@ -256,6 +256,34 @@
       <trans-unit id="P.KfobY" resname="Adult price">
         <source>Adult price</source>
         <target>Precio adulto</target>
+      </trans-unit>
+      <trans-unit id="tnX131." resname="Morocco">
+        <source>Morocco</source>
+        <target>Marruecos</target>
+      </trans-unit>
+      <trans-unit id="LFjrmXE" resname="Regular Excursions">
+        <source>Regular Excursions</source>
+        <target>Excursiones regulares</target>
+      </trans-unit>
+      <trans-unit id="wv6SCbm" resname="Conditions of sales">
+        <source>Conditions of sales</source>
+        <target>Condiciones de venta</target>
+      </trans-unit>
+      <trans-unit id="l9S_iWB" resname="Conditions">
+        <source>Conditions</source>
+        <target>Condiciones</target>
+      </trans-unit>
+      <trans-unit id="LGLKkbE" resname="Regular TOURS">
+        <source>Regular TOURS</source>
+        <target>TOURS Regulares</target>
+      </trans-unit>
+      <trans-unit id="zEoVeIi" resname="checkout our">
+        <source>checkout our</source>
+        <target>Echa un vistazo a nuestra</target>
+      </trans-unit>
+      <trans-unit id="mTN_IyH" resname="Regular Tours">
+        <source>Regular Tours</source>
+        <target>Tours regulares</target>
       </trans-unit>
     </body>
   </file>

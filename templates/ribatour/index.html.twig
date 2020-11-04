@@ -95,4 +95,42 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.tour-one -->
+    <section class="testimonials-one">
+        <div class="container">
+            <div class="block-title text-center">
+                <p>{% trans %}checkout our{% endtrans %}</p>
+                <h3>{% trans %}Regular Tours{% endtrans %}</h3>
+            </div><!-- /.block-title -->
+            <div class="row">
+                {% for excursionreguliere in excursionregulieres %}
+                    {% if excursionreguliere.envedette == true %}
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="tour-one__single">
+                            <div class="tour-one__image">
+                                <img src="{{ asset('photos/excursionregulieres/'~excursionreguliere.image) }}" alt="" style="width: 380px;height: 240px">
+                                <a href="{{path('excursionreguliere_show',{'id': excursionreguliere.id})}}"><i class="fa fa-heart"></i></a>
+                            </div><!-- /.tour-one__image -->
+                            <div class="tour-one__content">
+                                <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
+                                    Morocco
+                                </div><!-- /.tour-one__ville -->
+                                <h3><a href="{{path('excursionreguliere_show',{'id': excursionreguliere.id})}}">
+                                        {% if (app.request.getlocale()) == 'es' %}
+                                            {{excursionreguliere.nomes}}
+                                        {% elseif (app.request.getlocale()) == 'en' %}
+                                            {{excursionreguliere.nomen}}
+                                        {% elseif (app.request.getlocale()) == 'fr' %}
+                                            {{excursionreguliere.nomfr}}
+                                        {% endif %}
+                                    </a>
+                                </h3><!-- /.tour-one__Nom -->
+                            </div><!-- /.tour-one__content -->
+                        </div><!-- /.tour-one__single -->
+                    </div><!-- /.col-lg-4 -->
+                    {% endif %}
+                {% endfor %}
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section><!-- /.testimonials-one -->
 {% endblock %}

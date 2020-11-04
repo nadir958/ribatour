@@ -3,8 +3,8 @@
         <div class="topbar-one">
             <div class="container-fluid">
                 <div class="topbar-one__left">
-                    <a href="mailto:contact@ribatour.com">contact@ribatours.com</a>
-                    <a href="tel:+212 245 111 000">+212 245 111 000</a>
+                    <a href="mailto:contact@ribatour.com">info@ribatours.com</a>
+                    <a href="tel:+212 245 111 000">+212 5 24 42 98 98</a>
                     <a href="#">Rue Outman Appt 10 N 586
                         40000, MARRAKECH - MOROCCO</a>
                 </div><!-- /.topbar-one__left -->
@@ -43,6 +43,9 @@
                             </li>
                             <li {% if route_name == "excursions" %} class="current" {% else %} class="nav-item" {% endif %} >
                                 <a href="{{ path('excursions') }}">{% trans %}Excursions{% endtrans %}</a>
+                            </li>
+                            <li {% if route_name == "excursionregulieres" %} class="current" {% else %} class="nav-item" {% endif %} >
+                                <a href="{{ path('excursionregulieres') }}">{% trans %}Regular Excursions{% endtrans %}</a>
                             </li>
                             <li {% if route_name == "about" %} class="current" {% else %} class="nav-item" {% endif %} >
                             <a href="{{ path('about') }}">{% trans %}About Us{% endtrans %}</a>

@@ -28,8 +28,8 @@
                             <i class="tripo-icon-phone-call"></i>
                         </div><!-- /.contact-info-one__icon -->
                         <div class="contact-info-one__content">
-                            <p>Local: <a href="tel:+212 245 111 000">+212 245 111 000</a> <br>
-                                Mobile: <a href="tel:+123-456-hello">+ 123 456 hello</a></p><br>
+                            <p>Local: <a href="tel:+212 245 111 000">+212 5 24 42 98 98</a> <br>
+                                Mobile: <a href="tel:+123-456-hello">+212 5 24 42 98 98</a></p><br>
                         </div><!-- /.contact-info-one__content -->
                     </div><!-- /.contact-info-one__single -->
                 </div><!-- /.col-lg-4 -->
@@ -68,6 +68,11 @@
                     </div><!-- /.contact-one__content -->
                 </div><!-- /.col-lg-5 -->
                 <div class="col-lg-7">
+                    {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                     {{ form(contactForm) }}
                 </div><!-- /.col-lg-7 -->
             </div><!-- /.row -->
