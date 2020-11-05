@@ -25,7 +25,7 @@ class ContactController extends AbstractController
                 //expediteur
             ->SetFrom($contact['email'])
                 //destinataire
-            ->SetTo('layoune95@gmail.com')
+            ->SetTo('info@ribatours.com')
                 //view
             ->setBody(
                 $this->renderView(
@@ -36,7 +36,8 @@ class ContactController extends AbstractController
             //envoyer le message
             $mailer->send($message);
 
-            return $this->redirectToRoute('ribatour');
+            $this->addFlash("success","Thanks your message has been sent !");
+            return $this->redirectToRoute('contact');
         }
         return $this->render('contact/index.html.twig',['contactForm' => $form->createView()]);
     }

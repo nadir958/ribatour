@@ -45,6 +45,10 @@
         <source>properties.envoyer.label</source>
         <target>Enviar</target>
       </trans-unit>
+      <trans-unit id="IfvJdjN" resname="properties.ville.label">
+        <source>properties.ville.label</source>
+        <target>Ciudad</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

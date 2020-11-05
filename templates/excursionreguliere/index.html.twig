@@ -1,0 +1,150 @@
+{% extends 'excursion/dashboard_base.html.twig' %}
+
+{% block title %}Excursion index{% endblock %}
+
+{% block body %}
+
+    <div class="sidebar-nav">
+        <div class="sidebar-nav-body">
+            <div class="side-menu-close">
+                <i class="la la-times"></i>
+            </div><!-- end menu-toggler -->
+            <div class="author-content">
+                <div class="d-flex align-items-center">
+
+                    <div class="author-bio">
+                        <h4 class="author__title">Admin</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-menu-wrap">
+                <ul class="sidebar-menu list-items">
+                    <li><a href="{{ path('excursion_index') }}"><i class="la la-list-ul mr-2"></i>Excursions</a></li>
+                    <li class="page-active"><a href="{{ path('excursionreguliere_index') }}"><i class="la la-list-ul mr-2"></i>Excursions reguliere</a></li>
+                    <li><a href="{{ path('excursion_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion</a></li>
+                    <li><a href="{{ path('excursionreguliere_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion reguliere</a></li>
+                    <li><a href="{{ path('app_logout') }}"><i class="la la-power-off mr-2 text-color-6"></i>Déconnecter</a></li>
+                </ul>
+            </div><!-- end sidebar-menu-wrap -->
+        </div>
+    </div><!-- end sidebar-nav -->
+    <!-- ================================
+           END DASHBOARD NAV
+    ================================= -->
+
+    <!-- ================================
+        START DASHBOARD AREA
+    ================================= -->
+    <section class="dashboard-area">
+        <div class="dashboard-nav">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="menu-wrapper">
+                            <div class="logo mr-5">
+                                <a href="index.html"><img src="{{asset('images/travelagency-logo.png')}}" alt="logo"></a>
+                                <div class="menu-toggler">
+                                    <i class="la la-bars"></i>
+                                    <i class="la la-times"></i>
+                                </div><!-- end menu-toggler -->
+                                <div class="user-menu-open">
+                                    <i class="la la-user"></i>
+                                </div><!-- end user-menu-open -->
+                            </div>
+                        </div><!-- end menu-wrapper -->
+                    </div><!-- end col-lg-12 -->
+                </div><!-- end row -->
+            </div><!-- end container-fluid -->
+        </div><!-- end dashboard-nav -->
+        <div class="dashboard-content-wrap">
+            <div class="dashboard-bread dashboard--bread">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="breadcrumb-content">
+                                <div class="section-heading">
+                                    <h2 class="sec__title font-size-30">Ribatour Dashboard</h2>
+                                </div>
+                            </div><!-- end breadcrumb-content -->
+                        </div><!-- end col-lg-6 -->
+                        <div class="col-lg-6">
+                            <div class="breadcrumb-list">
+                                <ul class="list-items d-flex justify-content-end">
+                                    <li><a href="{{ path('excursion_index') }}" class="text-white">Dashboard</a></li>
+                                    <li><a href="{{ path('excursion_new') }}" class="text-white">Nouvelle Excursion</a></li>
+                                    <li><a href="{{ path('excursionreguliere_new') }}" class="text-white">Nouvelle Excursion reguliere</a></li>
+                                </ul>
+                            </div><!-- end breadcrumb-list -->
+                        </div><!-- end col-lg-6 -->
+                    </div><!-- end row -->
+                </div>
+            </div><!-- end dashboard-bread -->
+            <div class="dashboard-main-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-box">
+                                <div class="form-title-wrap">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <h3 class="title">List des Excursions Regulieres</h3>
+                                            <p class="font-size-14"></p>
+                                        </div>
+                                        <span>Total <strong class="color-text">({{ excursionregulieres | length }})</strong></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-content">
+                                    {% for message in app.flashes('success') %}
+                                        <div class="alert alert-success">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                    <div class="table-form table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Id</th>
+                                                <th scope="col">Nom</th>
+                                                <th scope="col">presentation</th>
+                                                <th scope="col">actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for excursionreguliere in excursionregulieres %}
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <h3 class="title">{{ excursionreguliere.id }}</h3>
+                                                        </div>
+                                                    </td>
+                                                    <td>{{ excursionreguliere.nomfr|length > 50 ? excursionreguliere.nomfr|slice(0, 50) ~ '...' : excursionreguliere.nomfr }}</td>
+                                                    <td>{{ excursionreguliere.presentationfr|length > 250 ? excursionreguliere.presentationfr|slice(0, 250) ~ '...' : excursionreguliere.presentationfr }}</td>
+                                                    <td>
+                                                        <div class="table-content ">
+                                                            {{ include('excursionreguliere/_delete_form.html.twig') }}
+
+                                                            <button class="btn btn-warning btn-block m-1">
+                                                                <a style="color: black" href="{{ path('excursionreguliere_edit', {'id': excursionreguliere.id}) }}">Modifier</a>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!-- end form-box -->
+                        </div><!-- end col-lg-12 -->
+                    </div><!-- end row -->
+
+                    <div class="border-top mt-5"></div>
+                </div><!-- end container-fluid -->
+            </div><!-- end dashboard-main-content -->
+        </div><!-- end dashboard-content-wrap -->
+    </section><!-- end dashboard-area -->
+    <!-- ================================
+        END DASHBOARD AREA
+    ================================= -->
+{% endblock %}

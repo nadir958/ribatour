@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Excursion{% endblock %}
+
+{% block body %}
+    <section class="page-header" style="background-image: url({{asset('images/backgrounds/ribatour-tours.jpg')}});">
+        <div class="container">
+            {% if (app.request.getlocale()) == 'es' %}
+                <h2>{{ excursionreguliere.nomes }}</h2>
+            {% elseif (app.request.getlocale()) == 'en' %}
+                <h2>{{ excursionreguliere.nomen }}</h2>
+            {% elseif (app.request.getlocale()) == 'fr' %}
+                <h2>{{ excursionreguliere.nomfr }}</h2>
+            {% endif %}
+        </div><!-- /.container -->
+    </section><!-- /.page-header -->
+
+    <section class="tour-two tour-list" style="padding-top: 40px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" style="padding-top: -20px">
+                    <div class="tour-details__content">
+                        <div class="tour-two__top">
+                            <div class= "tour-two__top-left">
+                                <div class="tour-one__stars"><i class="fas fa-map-marker-alt"></i>
+
+                                   {% trans %} Morocco {% endtrans %}
+
+                                </div><!-- /.tour-one__ville -->
+                            </div><!-- /.tour-two__top-left -->
+                        </div>
+
+                        <div class="tour-details__gallery-carousel">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="tour-details__gallery-image">
+                                        <img src="{{ asset('photos/excursionregulieres/'~excursionreguliere.image) }}" style="width: 600px;height: 400px" alt="{{ excursionreguliere.nomen }}">
+                                    </div><!-- /.tour-details__gallery-image -->
+                                </div><!-- /.swiper-slide -->
+                            </div><!-- /.tour-details__gallery-carousel -->
+                            <br/><h3 class="tour-details__title">{% trans %}Presentation{% endtrans %}</h3><!-- /.tour-details__title -->
+                            {% if (app.request.getlocale()) == 'es' %}
+                                <p>{{ excursionreguliere.presentationes|raw }}</p>
+                            {% elseif (app.request.getlocale()) == 'en' %}
+                                <p>{{ excursionreguliere.presentationen|raw }}</p>
+                            {% elseif (app.request.getlocale()) == 'fr' %}
+                                <p>{{ excursionreguliere.presentationfr|raw }}</p>
+                            {% endif %}
+                            <!-- /.tour-details__subtitle -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.reservation form -->
+                <div class="col-lg-4">
+                    <div class="tour-sidebar">
+                        <div class="tour-sidebar__search tour-sidebar__single">
+                            <h3 style="text-align: center">{% trans %}book{% endtrans %}</h3>
+                            {{form_start(reservationForm)}}
+                            {{form_row(reservationForm.nom)}}
+                            {{form_row(reservationForm.prenom)}}
+                            {{form_row(reservationForm.Tel)}}
+                            {{form_row(reservationForm.email)}}
+                            {{form_row(reservationForm.nombreAdulte)}}
+                            {{form_row(reservationForm.NombreEnfant)}}
+                            {{form_row(reservationForm.DateDebut, { attr:{ class:'js-datepicker' } })}}
+                            {{form_row(reservationForm.DateFin, { attr:{ class:'js-datepicker' } })}}
+                            {{form_row(reservationForm.message)}}
+                            {{form_end(reservationForm)}}
+                        </div><!-- /.tour-sidebar__search -->
+                    </div>
+                </div>
+            </div>
+            </div></div>
+    </section>
+
+{% endblock %}
+{% block javascripts %}
+    {{parent()}}
+    <script>
+        (function($){
+            $.fn.datepicker.dates['fr'] = {
+                days: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
+                daysShort: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+                daysMin: ["d", "l", "ma", "me", "j", "v", "s"],
+                months: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
+                monthsShort: ["janv.", "févr.", "mars", "avril", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."],
+                today: "Aujourd'hui",
+                monthsTitle: "Mois",
+                clear: "Effacer",
+                weekStart: 1,
+                format: "dd/mm/yyyy"
+            };
+            $.fn.datepicker.dates['es'] = {
+                days: ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+                daysShort: ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
+                daysMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"],
+                months: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                monthsShort: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+                today: "Hoy",
+                monthsTitle: "Mes",
+                weekStart: 1,
+                format: "dd/mm/yyyy"
+            };
+        }(jQuery));
+
+        $('.js-datepicker').datepicker({
+            autoclose: true,
+            dateFormat : 'dd/mm/yy',
+            format:'dd/mm/yyyy',
+            {% if (app.request.getlocale()) == 'es' %}
+            language: 'es',
+            {% elseif (app.request.getlocale()) == 'en' %}
+            language: 'en',
+            {% elseif (app.request.getlocale()) == 'fr' %}
+            language: 'fr',
+            {% endif %}
+        }).datepicker("setDate", 'now');
+
+    </script>
+{% endblock %}

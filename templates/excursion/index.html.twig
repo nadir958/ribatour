@@ -20,7 +20,9 @@
             <div class="sidebar-menu-wrap">
                 <ul class="sidebar-menu list-items">
                     <li class="page-active"><a href="{{ path('excursion_index') }}"><i class="la la-list-ul mr-2"></i>Excursions</a></li>
-                    <li ><a href="{{ path('excursion_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion</a></li>
+                    <li ><a href="{{ path('excursionreguliere_index') }}"><i class="la la-list-ul mr-2"></i>Excursions reguliere</a></li>
+                    <li><a href="{{ path('excursion_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion</a></li>
+                    <li><a href="{{ path('excursionreguliere_new') }}"><i class="la la-plus mr-2"></i>Ajouter Excursion reguliere</a></li>
                     <li><a href="{{ path('app_logout') }}"><i class="la la-power-off mr-2 text-color-6"></i>Déconnecter</a></li>
                 </ul>
             </div><!-- end sidebar-menu-wrap -->
@@ -70,6 +72,7 @@
                                 <ul class="list-items d-flex justify-content-end">
                                     <li><a href="{{ path('excursion_index') }}" class="text-white">Dashboard</a></li>
                                     <li><a href="{{ path('excursion_new') }}" class="text-white">Nouvelle Excursion</a></li>
+                                    <li><a href="{{ path('excursionreguliere_new') }}" class="text-white">Nouvelle Excursion reguliere</a></li>
                                 </ul>
                             </div><!-- end breadcrumb-list -->
                         </div><!-- end col-lg-6 -->
@@ -100,39 +103,39 @@
                                     <div class="table-form table-responsive">
                                         <table class="table">
                                             <thead>
-                                            <tr>
-                                                <th scope="col">Nom</th>
-                                                <th scope="col">Ville</th>
-                                                <th scope="col">Prix adulte</th>
-                                                <th scope="col">Prix enfant</th>
-                                                <th scope="col">Presentation</th>
-                                                <th scope="col">Action</th>
-                                            </tr>
+                                                <tr>
+                                                    <th scope="col">Nom</th>
+                                                    <th scope="col">Ville</th>
+                                                    <th scope="col">Prix adulte</th>
+                                                    <th scope="col">Prix enfant</th>
+                                                    <th scope="col">Presentation</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
                                             </thead>
                                             <tbody>
-                                            {% for excursion in excursions %}
-                                            <tr>
-                                                <td>
-                                                    <div class="table-content">
-                                                        <h3 class="title">{{ excursion.nom }}</h3>
-                                                    </div>
-                                                </td>
-                                                <td>{{ excursion.ville }} </td>
-                                                <td>{{ excursion.prixadulte }} $</td>
-                                                <td>{{ excursion.prixenfant }} $</td>
-                                                <td>{{ excursion.presentation|length > 150 ? excursion.presentation|slice(0, 150) ~ '...' : excursion.presentation  }}</td>
+                                                {% for excursion in excursions %}
+                                                <tr>
+                                                    <td>
+                                                        <div class="table-content">
+                                                            <h3 class="title">{{ excursion.nom }}</h3>
+                                                        </div>
+                                                    </td>
+                                                    <td>{{ excursion.ville }} </td>
+                                                    <td>{{ excursion.prixadulte }} $</td>
+                                                    <td>{{ excursion.prixenfant }} $</td>
+                                                    <td>{{ excursion.presentation|length > 150 ? excursion.presentation|slice(0, 150) ~ '...' : excursion.presentation  }}</td>
 
-                                                <td>
-                                                    <div class="table-content ">
-                                                        {{ include('excursion/_delete_form.html.twig') }}
+                                                    <td>
+                                                        <div class="table-content ">
+                                                            {{ include('excursion/_delete_form.html.twig') }}
 
-                                                        <button class="btn btn-warning btn-block m-1">
-                                                            <a style="color: black" href="{{ path('excursion_edit', {'id': excursion.id}) }}">Modifier</a>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            {% endfor %}
+                                                            <button class="btn btn-warning btn-block m-1">
+                                                                <a style="color: black" href="{{ path('excursion_edit', {'id': excursion.id}) }}">Modifier</a>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                {% endfor %}
                                             </tbody>
                                         </table>
                                     </div>

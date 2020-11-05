@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Excursion;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -25,9 +26,9 @@ class ExcursionType extends AbstractType
             ->add('prixadulte',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('prixenfant',NumberType::class,['invalid_message' => 'entrer un nombre',])
             ->add('imagesFile',FileType::class,['required'=>false])
-            ->add('presentation',TextareaType::class,['label'=>'Francais'])
-            ->add('presentationes',TextareaType::class,['label'=>'Espagnol'])
-            ->add('presentationen',TextareaType::class,['label'=>'Englais'])
+            ->add('presentation',CKEditorType::class,['label'=>'Francais'])
+            ->add('presentationes',CKEditorType::class,['label'=>'Espagnol'])
+            ->add('presentationen',CKEditorType::class,['label'=>'Englais'])
             ->add('envedette',CheckboxType::class, [
                 'label'    => 'afficher en vedette ?',
                 'required' => false,

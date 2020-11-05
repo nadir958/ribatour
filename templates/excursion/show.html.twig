@@ -53,11 +53,11 @@
                     </div><!-- /.tour-details__gallery-carousel -->
                         <br/><h3 class="tour-details__title">{% trans %}Presentation{% endtrans %}</h3><!-- /.tour-details__title -->
                         {% if (app.request.getlocale()) == 'es' %}
-                            <p>{{ excursion.presentationes }}</p>
+                            <p>{{ excursion.presentationes|raw }}</p>
                         {% elseif (app.request.getlocale()) == 'en' %}
-                            <p>{{ excursion.presentationen }}</p>
+                            <p>{{ excursion.presentationen|raw }}</p>
                         {% elseif (app.request.getlocale()) == 'fr' %}
-                            <p>{{ excursion.presentation }}</p>
+                            <p>{{ excursion.presentation|raw }}</p>
                         {% endif %}
                     <!-- /.tour-details__subtitle -->
                     </div>
